@@ -50,7 +50,7 @@ BMP_ARRAY* load_bmp_array(char *dir,int item_num)
 	if(item_num==1)
 	{
 		sprintf(file_path,"%s*.bmp",dir);
-		i= for_each_file(file_path,_A_NORMAL|_A_ARCH,find_one_file,0);
+		i= for_each_file(file_path,FA_ARCH,find_one_file,0);
 
 		if(i!=1){allegro_message("couldn't load %s",file_path);exit(-1);}
 		
@@ -166,7 +166,7 @@ RLE_ARRAY* load_rle_array(char *dir,int item_num)
 	if(item_num==1)
 	{
 		sprintf(file_path,"%s*.bmp",dir);
-		i= for_each_file(file_path,_A_NORMAL|_A_ARCH,find_one_rle_file,0);
+		i= for_each_file(file_path,FA_ARCH,find_one_rle_file,0);
 
 		if(i!=1){allegro_message("couldn't load %s",file_path);exit(-1);}
 		
