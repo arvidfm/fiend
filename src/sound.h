@@ -14,7 +14,7 @@ typedef struct
 	char name[50];
 	int volume;
 	int num;
-	FSOUND_SAMPLE *sound; 
+	FMOD_SOUND *sound; 
 }SOUND_INFO;
 
 

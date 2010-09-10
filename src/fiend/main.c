@@ -8,8 +8,8 @@
 #include <allegro.h>
 
 #include "../fiend.h"
-#include "grafik4.h"
-#include "console.h"
+#include "../grafik4.h"
+#include "../console.h"
 
 
 
