@@ -1,0 +1,11 @@
+TYPE: SCROLL FONT: avalon
+Thomas is a nice guy!.
+; LINE
+; LINE
+; LINE
+; LINE
+Yes yes yes....
+;
+; CENTER LINE
+abbadaddad 
+; END_OF_FILE LINE

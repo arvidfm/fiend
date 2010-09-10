@@ -1,0 +1,15 @@
+TYPE: SCROLL FONT: avalon
+; CENTER
+THE POWDER OF THE DOOMED
+; LINE
+; LINE
+; LINE 
+First you append the sun colored dust and add the snow. The last thing you need is 
+some of the grey straws. When this mixtures has felt the presence of heat it 
+will form the powder the was used for thousands of years during rituals in the great city of Xtanopel.
+; LINE
+Always remember that the ash of the clear sky resets the process. 
+; LINE
+
+; LINE
+; END_OF_FILE LINE

@@ -1,0 +1,33 @@
+frames: 8
+name: Rat
+width: 30 height: 30 hit_height: 30 hit_width: 30 angles: 18 speed: 0.5 energy: 18 weight: 20
+
+eye_type: 0 can_smell: 1 can_hear: 1 hear_range: 200
+run_when_hurt: 10 attack_from_behind: 1 attack_in_group: 1 use_a_star: 1 care_if_hurt: 1 fov: 80
+
+weapon_name_1: rat_claws weapon_range_1: 50 weapon_random_1: 60 weapon_length_1: 31
+weapon_name_2: null weapon_range_2: 70  weapon_random_2: 0 weapon_length_2: 50
+weapon_name_3: null weapon_range_3: 100 weapon_random_3: 30 weapon_length_3: 40
+
+move_random: 50 move_random_length: 40 move_random_time: 30
+death_explosion: null death_explosion_num: 0
+
+blood_x: 0 blood_y: 0
+bloodcolor: 200 0 0 show_bloodpool: 1
+
+under_player: 1 regenerate: 0 
+
+sound_death: rat_die1 sound_hurt: none 
+sound_ambient_num: 0 
+sound_ambient_1: rat_idle1 sound_ambient_2: none sound_ambient_3: none sound_ambient_4: rat_idle1 sound_ambient_5: none
+sound_ambinet_random_1: 200 sound_ambinet_random_2: 3500 sound_ambinet_random_3: 3500 sound_ambinet_random_4: 130 sound_ambinet_random_5: 500
+
+step_sound: rat_step1 run_add: 6
+walk_step1: 7 walk_step2: 14 run_step1: 1 run_step2: 4
+
+animations: 5
+still 0 255 0 -1
+moving 0 0 0 1 1 1 2 2 2 1 1 1 0 0 0 3 3 3 3 4 4 4 3 3 3 255 0 -1
+running 0 1 2 1 0 3 4 3 255 0 -1
+attacking 0 5 6 6 5 5 5 255 0 -1
+dead 7 255 0 -1

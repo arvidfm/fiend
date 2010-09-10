@@ -1,0 +1,8 @@
+frames: 5
+name: eyes
+aa: 1 
+trans: 0
+trans_alpha: 0
+rotate: 0
+4 4 3 3 2 2 1 1 0 0 1 1 2 2 3 3 4 4 255 16 -1
+

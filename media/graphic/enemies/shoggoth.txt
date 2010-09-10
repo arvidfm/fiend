@@ -1,0 +1,32 @@
+frames: 4
+name: Shoggoth
+width: 70 height: 70 hit_height: 80 hit_width: 120 angles: 18 speed: 1 energy: 7000 weight: 150
+
+eye_type: 0 can_smell: 0 can_hear: 1 hear_range: 400
+run_when_hurt: 0 attack_from_behind: 0 attack_in_group: 0 use_a_star: 1 care_if_hurt: 1 fov: 80
+
+weapon_name_1: shoggoth_attack weapon_range_1: 70 weapon_random_1: 0 weapon_length_1: 40
+weapon_name_2: null weapon_range_2: 70  weapon_random_2: 0 weapon_length_2: 50
+weapon_name_3: null weapon_range_3: 100 weapon_random_3: 30 weapon_length_3: 40
+
+move_random: 500 move_random_length: 20 move_random_time: 60
+death_explosion: null death_explosion_num: 0
+
+blood_x: 0 blood_y: 0
+bloodcolor: 0 200 0 show_bloodpool: 1
+
+under_player: 0 regenerate: 0 
+
+sound_death: none sound_hurt: none 
+sound_ambient_num: 0 
+sound_ambient_1: shoggoth_idle1 sound_ambient_2: none sound_ambient_3: none sound_ambient_4: shoggoth_idle1 sound_ambient_5: none
+sound_ambinet_random_1: 300 sound_ambinet_random_2: 3500 sound_ambinet_random_3: 3500 sound_ambinet_random_4: 200 sound_ambinet_random_5: 500
+
+step_sound: shoggoth_step1 run_add: 3.1
+walk_step1: 1 walk_step2: 13 run_step1: 1 run_step2: 6
+
+animations: 4
+still 0 255 0 -1
+moving 0 0 0 0 0 0 1 1 1 1 1 1 2 2 2 2 2 2 2 3 3 3 3 3 3 2 2 2 2 2 2 1 1 1 1 1 1 255 0 -1
+running 0 0 0 0 1 1 1 1 2 2 2 3 3 3 2 2 2 1 1 1 255 0 -1
+dead 0 255 0 -1

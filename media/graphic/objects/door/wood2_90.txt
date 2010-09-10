@@ -1,0 +1,12 @@
+frames: 1
+name: door_wood1_l_90
+can_be_killed: 0 can_be_pushed: 0
+folder: Room_Stuff
+width: 68 height: 8 angles: 1 solid: 3 energy: 0
+door: 4 door_x: -34 door_y: 2
+additive: 0 trans: 0
+animations: 2
+solid: 0 name: close sound: door_wood_open01 loop_sound: 0
+0 255 0 -1
+solid: 1 name: open sound: door_wood_open01 loop_sound: 0
+0 255 0 -1

@@ -1,0 +1,25 @@
+name: env_table1
+1_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+2_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+3_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+4_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+5_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+6_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+7_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+8_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+9_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+10_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+11_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+12_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+13_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+14_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+15_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+16_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+17_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+18_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+19_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+20_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+21_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+22_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+23_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+24_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal

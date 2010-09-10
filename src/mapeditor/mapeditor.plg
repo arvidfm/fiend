@@ -1,0 +1,157 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: mapeditor - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP5366.TMP" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/mapeditor.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\Säkring\Fiend\src\bmp_array.c"
+"D:\Säkring\Fiend\src\character.c"
+"D:\Säkring\Fiend\src\console.c"
+"D:\Säkring\Fiend\src\mapeditor\console_funcs.c"
+"D:\Säkring\Fiend\src\mapeditor\d_area.c"
+"D:\Säkring\Fiend\src\mapeditor\d_brush.c"
+"D:\Säkring\Fiend\src\mapeditor\d_enemy.c"
+"D:\Säkring\Fiend\src\mapeditor\d_global_trigger.c"
+"D:\Säkring\Fiend\src\mapeditor\d_item.c"
+"D:\Säkring\Fiend\src\mapeditor\d_light.c"
+"D:\Säkring\Fiend\src\mapeditor\d_link.c"
+"D:\Säkring\Fiend\src\mapeditor\d_lookat_area.c"
+"D:\Säkring\Fiend\src\mapeditor\d_misc.c"
+"D:\Säkring\Fiend\src\mapeditor\d_npc.c"
+"D:\Säkring\Fiend\src\mapeditor\d_object.c"
+"D:\Säkring\Fiend\src\mapeditor\d_pathnode.c"
+"D:\Säkring\Fiend\src\mapeditor\d_sound.c"
+"D:\Säkring\Fiend\src\mapeditor\d_trigger.c"
+"D:\Säkring\Fiend\src\draw.c"
+"D:\Säkring\Fiend\src\enemy.c"
+"D:\Säkring\Fiend\src\fiend.c"
+"D:\Säkring\Fiend\src\grafik4.c"
+"D:\Säkring\Fiend\src\item.c"
+"D:\Säkring\Fiend\src\lightmap.c"
+"D:\Säkring\Fiend\src\mapeditor\mapdraw.c"
+"D:\Säkring\Fiend\src\mapeditor\mapedit.c"
+"D:\Säkring\Fiend\src\mapio.c"
+"D:\Säkring\Fiend\src\mapeditor\menu_edit.c"
+"D:\Säkring\Fiend\src\mapeditor\menu_file.c"
+"D:\Säkring\Fiend\src\mapeditor\menu_misc.c"
+"D:\Säkring\Fiend\src\mapeditor\menu_options.c"
+"D:\Säkring\Fiend\src\NPC.c"
+"D:\Säkring\Fiend\src\object.c"
+"D:\Säkring\Fiend\src\picdata.c"
+"D:\Säkring\Fiend\src\rotate_sprite.c"
+"D:\Säkring\Fiend\src\sound.c"
+"D:\Säkring\Fiend\src\tile.c"
+"D:\Säkring\Fiend\src\trigger.c"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP5366.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP5367.TMP" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib alleg.lib fmodvc.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/mapeditor.pdb" /machine:I386 /nodefaultlib:"libcmt.lib" /out:"Release/mapeditor.exe" 
+".\Release\bmp_array.obj"
+".\Release\character.obj"
+".\Release\console.obj"
+".\Release\console_funcs.obj"
+".\Release\d_area.obj"
+".\Release\d_brush.obj"
+".\Release\d_enemy.obj"
+".\Release\d_global_trigger.obj"
+".\Release\d_item.obj"
+".\Release\d_light.obj"
+".\Release\d_link.obj"
+".\Release\d_lookat_area.obj"
+".\Release\d_misc.obj"
+".\Release\d_npc.obj"
+".\Release\d_object.obj"
+".\Release\d_pathnode.obj"
+".\Release\d_sound.obj"
+".\Release\d_trigger.obj"
+".\Release\draw.obj"
+".\Release\enemy.obj"
+".\Release\fiend.obj"
+".\Release\grafik4.obj"
+".\Release\item.obj"
+".\Release\lightmap.obj"
+".\Release\mapdraw.obj"
+".\Release\mapedit.obj"
+".\Release\mapio.obj"
+".\Release\menu_edit.obj"
+".\Release\menu_file.obj"
+".\Release\menu_misc.obj"
+".\Release\menu_options.obj"
+".\Release\NPC.obj"
+".\Release\object.obj"
+".\Release\picdata.obj"
+".\Release\rotate_sprite.obj"
+".\Release\sound.obj"
+".\Release\tile.obj"
+".\Release\trigger.obj"
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP5367.TMP"
+<h3>Output Window</h3>
+Compiling...
+bmp_array.c
+D:\Säkring\Fiend\src\bmp_array.c(53) : warning C4090: 'function' : different 'const' qualifiers
+D:\Säkring\Fiend\src\bmp_array.c(53) : warning C4028: formal parameter 1 different from declaration
+D:\Säkring\Fiend\src\bmp_array.c(53) : warning C4024: 'for_each_file' : different types for formal and actual parameter 3
+D:\Säkring\Fiend\src\bmp_array.c(169) : warning C4090: 'function' : different 'const' qualifiers
+D:\Säkring\Fiend\src\bmp_array.c(169) : warning C4028: formal parameter 1 different from declaration
+D:\Säkring\Fiend\src\bmp_array.c(169) : warning C4024: 'for_each_file' : different types for formal and actual parameter 3
+character.c
+console.c
+console_funcs.c
+d_area.c
+d_brush.c
+d_enemy.c
+d_global_trigger.c
+d_item.c
+D:\Säkring\Fiend\src\mapeditor\d_global_trigger.c(574) : warning C4715: 'd_edit_trigger_button_proc' : not all control paths return a value
+D:\Säkring\Fiend\src\mapeditor\d_global_trigger.c(603) : warning C4715: 'd_delete_trigger_button_proc' : not all control paths return a value
+d_light.c
+d_link.c
+d_lookat_area.c
+d_misc.c
+d_npc.c
+d_object.c
+d_pathnode.c
+d_sound.c
+d_trigger.c
+draw.c
+D:\Säkring\Fiend\src\mapeditor\d_trigger.c(709) : warning C4715: 'd_new_trigger_button_proc' : not all control paths return a value
+D:\Säkring\Fiend\src\mapeditor\d_trigger.c(723) : warning C4715: 'd_edit_trigger_button_proc' : not all control paths return a value
+D:\Säkring\Fiend\src\mapeditor\d_trigger.c(754) : warning C4715: 'd_delete_trigger_button_proc' : not all control paths return a value
+enemy.c
+fiend.c
+grafik4.c
+item.c
+lightmap.c
+mapdraw.c
+mapedit.c
+mapio.c
+menu_edit.c
+menu_file.c
+menu_misc.c
+menu_options.c
+NPC.c
+object.c
+picdata.c
+rotate_sprite.c
+sound.c
+tile.c
+trigger.c
+D:\Säkring\Fiend\src\trigger.c(84) : warning C4090: 'function' : different 'const' qualifiers
+D:\Säkring\Fiend\src\trigger.c(84) : warning C4028: formal parameter 1 different from declaration
+D:\Säkring\Fiend\src\trigger.c(84) : warning C4024: 'for_each_file' : different types for formal and actual parameter 3
+Linking...
+
+
+
+<h3>Results</h3>
+mapeditor.exe - 0 error(s), 14 warning(s)
+</pre>
+</body>
+</html>

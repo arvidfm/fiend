@@ -1,0 +1,27 @@
+TYPE: SCROLL FONT: avalon
+Dear Harold.
+; LINE
+; LINE
+Some strange things has happened in this house lately and I don't know who else 
+to turn to. Joseph has become stranger and stranger ever since we got here. First
+he complained about nightmares and I thought it was because of that, but now I don't
+know. 
+; LINE
+Four days ago he got a terrible headache and ever since that
+he has been in the library all the time. He hasn't even gone to bed at night.
+; LINE
+I have tried to talk to him but he hasn't even looked in my direction, he just mumbles words
+in a way I have never heard him talk in before. I am really worried about him and would be grateful
+if you could come over here and try to talk with him.
+; LINE
+; LINE
+I will try to post this letter tonight.
+; LINE
+; LINE
+Best regards
+; LINE
+Emilie 
+; LINE
+
+; LINE
+; END_OF_FILE LINE

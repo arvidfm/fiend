@@ -1,0 +1,22 @@
+name: rifle player_action: shoot_rifle
+weight: 38
+flame_num: 6 flame_length: 5 flame_x: 4 flame_y: -64
+light_r: 1 light_c: 1
+sound: shotgun gunshot_length: 50 silent: 0
+max_ammo: 5
+num_of_missiles: 10 missile_angle: 34
+missile_x: 4 missile_y: -40
+shell_name: shell01
+shell_x: -4 shell_y: -15 shell_angle: 90 shell_after_shot_length: 30
+
+missile_name: null
+speed: 3
+range: 400 range_dec: 0
+beam: 1
+min_damage: 7 max_damage: 14 damage_range: -1 damage_range_dec: 0.7
+explosion_name: normal num_of_explosions: 1
+particle_name: null particle_num: 0
+strength: 7
+missile_light_r: -1 missile_light_c: -1
+hit_enemy: 1
+

@@ -1,0 +1,10 @@
+frames: 1
+name: box_wood3_2
+can_be_killed: 0 can_be_pushed: 0
+folder: Room_Stuff
+width: 32 height: 32 angles: 4 solid: 1 energy: 100
+door: 0 door_x: 0 door_y: 0
+additive: 0 trans: 0
+animations: 1
+solid: 1 name: normal sound: none loop_sound: 0 
+0 255 0 -1

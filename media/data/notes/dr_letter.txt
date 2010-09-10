@@ -1,0 +1,26 @@
+TYPE: SCROLL FONT: avalon
+; RIGHT
+To Dr Samuel Davies
+; LINE
+Dear Samuel
+; LINE
+; LINE
+Thanks for the stone samples that you sent me. The inscriptions
+on them are truly amazing. Nobody on the institute has seen anything
+like it. 
+; LINE
+It would be great honor for me to ensemble a research team and with
+you has guide investigate the area that the stones where found in.
+; LINE
+; LINE
+Best regards
+; LINE
+Jeremiah Spring
+; LINE
+Lector in Archaeology
+; LINE
+Miskatonic University 
+; LINE
+
+; LINE
+; END_OF_FILE LINE

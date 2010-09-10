@@ -1,0 +1,19 @@
+name: Water2
+1_masked: 0 trans: 0 solid: 0 next_tile: 1 anim_speed: 7 sound: step-normal
+2_masked: 0 trans: 0 solid: 0 next_tile: 2 anim_speed: 7 sound: step-normal
+3_masked: 0 trans: 0 solid: 0 next_tile: 3 anim_speed: 7 sound: step-normal
+4_masked: 0 trans: 0 solid: 0 next_tile: 4 anim_speed: 7 sound: step-normal
+5_masked: 0 trans: 0 solid: 0 next_tile: 5 anim_speed: 7 sound: step-normal
+6_masked: 0 trans: 0 solid: 0 next_tile: 6 anim_speed: 7 sound: step-normal
+7_masked: 0 trans: 0 solid: 0 next_tile: 7 anim_speed: 7 sound: step-normal
+8_masked: 0 trans: 0 solid: 0 next_tile: 8 anim_speed: 7 sound: step-normal
+9_masked: 0 trans: 0 solid: 0 next_tile: 9 anim_speed: 7 sound: step-normal
+10_masked: 0 trans: 0 solid: 0 next_tile: 10 anim_speed: 7 sound: step-normal
+11_masked: 0 trans: 0 solid: 0 next_tile: 11 anim_speed: 7 sound: step-normal
+12_masked: 0 trans: 0 solid: 0 next_tile: 12 anim_speed: 7 sound: step-normal
+13_masked: 0 trans: 0 solid: 0 next_tile: 13 anim_speed: 7 sound: step-normal
+14_masked: 0 trans: 0 solid: 0 next_tile: 14 anim_speed: 7 sound: step-normal
+15_masked: 0 trans: 0 solid: 0 next_tile: 15 anim_speed: 7 sound: step-normal
+16_masked: 0 trans: 0 solid: 0 next_tile: 16 anim_speed: 7 sound: step-normal
+17_masked: 0 trans: 0 solid: 0 next_tile: 17 anim_speed: 7 sound: step-normal
+18_masked: 0 trans: 0 solid: 0 next_tile: 0 anim_speed: 7 sound: step-normal

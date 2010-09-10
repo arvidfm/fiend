@@ -1,0 +1,20 @@
+TYPE: SCROLL FONT: avalon
+; CENTER
+The Laboratory dream
+; LINE
+; 
+It was a moonlit night when I heard the army from the other side approach.
+; LINE
+; LINE
+The unnamable creatures where around me and I could taste the rotting 
+death slowly dissolving my sanity. 
+; LINE
+; LINE
+When the end seemed to be near I was blinded by a bright light and returned to the waken world.
+; LINE
+; LINE
+As I woke up I found myself with a firm grip holding a wooden plug in my right hand.
+; LINE
+
+; LINE
+; END_OF_FILE LINE

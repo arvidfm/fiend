@@ -1,0 +1,8 @@
+frames: 1
+name: shell01
+aa: 0 
+trans: 0
+trans_alpha: 0
+rotate: 1
+0 255 0 -1
+

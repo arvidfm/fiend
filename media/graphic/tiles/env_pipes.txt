@@ -1,0 +1,19 @@
+name: env_pipes
+1_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-metal
+2_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-metal
+3_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-metal
+4_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-metal
+5_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-metal
+6_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-metal
+7_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-metal
+8_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-metal
+9_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+10_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+11_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+12_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+13_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+14_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+15_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+16_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+17_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+18_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal

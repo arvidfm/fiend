@@ -1,0 +1,12 @@
+frames: 1
+name: house_lamp3
+can_be_killed: 0 can_be_pushed: 0
+folder: Room_Stuff
+width: 20 height: 20 angles: 4 solid: 1 energy: 100
+door: 0 door_x: 0 door_y: 0
+additive: 0 trans: 0
+animations: 1
+solid: 0 name: temp sound: none loop_sound: 0 
+0 255 0 -1
+
+ 

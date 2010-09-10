@@ -1,0 +1,14 @@
+TYPE: SCROLL FONT: avalon
+Father got mad at us. Mother said he wanted to hurt us. Mother
+told me to hide. I locked the door from the inside and hid under the bed.
+Father was outside and angry. He hit the door many times and screamed, but
+he is gone now.
+; LINE
+; LINE
+I am scared, I hear the rats in the walls. I scream when they come
+and then they go away. They are getting more and more. One bit me in the leg.
+I am bleeding. I am so scared. Mother where are you?
+; LINE
+
+; LINE
+; END_OF_FILE LINE

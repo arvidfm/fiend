@@ -1,0 +1,9 @@
+shell01 shell01.txt
+dust dust.txt
+blueball1 blueball1.txt
+blueball2 blueball2.txt
+arrow arrow.txt
+rain rain.txt
+eyes eyes.txt
+fireball1 fireball1.txt
+fireball2 fireball2.txt

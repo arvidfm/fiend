@@ -1,0 +1,11 @@
+name: env_table2
+1_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+2_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+3_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+4_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+5_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+6_masked: 1 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+7_masked: 1 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+8_masked: 1 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+9_masked: 1 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+

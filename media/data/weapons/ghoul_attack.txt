@@ -1,0 +1,21 @@
+name: ghoul_attack player_action: attacking
+weight: 4
+flame_num: -1 flame_length: 5 flame_x: 4 flame_y: -64
+light_r: -1 light_c: -1
+sound: ghoul_attack1 shot_length: 20 silent: 0
+max_ammo: 17
+num_of_missiles: 1 missile_angle: 0
+missile_x: 0 missile_y: 0
+shell_name: none
+shell_x: -4 shell_y: -15 shell_angle: 90 shell_after_shot_length: 0
+
+missile_name: null
+speed: 10
+range: 6 range_dec: 0
+beam: 0
+min_damage: 18 max_damage: 38 damage_range: -1 damage_range_dec: 0
+explosion_name: none num_of_explosions: 0
+particle_name: null particle_num: 0
+strength: 12
+missile_light_r: -1 missile_light_c: -1
+hit_enemy: 0

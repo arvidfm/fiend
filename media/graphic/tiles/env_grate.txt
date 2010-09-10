@@ -1,0 +1,7 @@
+name: env_grate
+1_masked: 1 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal
+2_masked: 1 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal
+3_masked: 1 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal
+4_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-grate
+5_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-grate
+6_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-grate

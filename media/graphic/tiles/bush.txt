@@ -1,0 +1,17 @@
+name: Bush
+1_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+2_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+3_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+4_masked: 0 trans: 0 solid: 1 next_tile: -1 anim_speed: 0 sound: step-normal
+5_masked: 1 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal
+6_masked: 1 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal
+7_masked: 1 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal
+8_masked: 1 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal
+9_masked: 1 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal
+10_masked: 1 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal
+11_masked: 1 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal
+12_masked: 1 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal
+13_masked: 1 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal
+14_masked: 1 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal
+15_masked: 1 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal
+16_masked: 1 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal

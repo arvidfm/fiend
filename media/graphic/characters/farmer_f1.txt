@@ -1,0 +1,9 @@
+frames: 3
+name: Farmer_female_1
+width: 60 height: 60 hit_width: 50 hit_height: 50 angles: 30 speed: 2 energy: 100 weight: 100
+sound_death: man_die sound_hurt: none sound_ambient: none
+blood_x: 0 blood_y: 0 run_add: 1.5
+walk_step1: 4 walk_step2: 19 run_step1: 7 run_step1: 15
+animations: 1
+still_none 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 255 0 -1
+

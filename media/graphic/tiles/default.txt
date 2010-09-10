@@ -1,0 +1,7 @@
+name: default
+1masked: 1 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal
+2masked: 0 trans: 0 solid: 2 next_tile: -1 anim_speed: 0 sound: step-normal
+3masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal
+4masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal
+5masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal
+6masked: 1 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal

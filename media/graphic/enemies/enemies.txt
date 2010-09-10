@@ -1,0 +1,5 @@
+wolf wolf.txt
+rat rat.txt
+ghoul ghoul.txt
+joseph joseph.txt
+shoggoth shoggoth.txt

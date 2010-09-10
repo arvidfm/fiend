@@ -1,0 +1,8 @@
+frames: 5
+name: rain
+aa: 1 
+trans: 0
+trans_alpha: 0
+rotate: 0
+0 0 1 1 2 2 3 3 4 255 8 -1
+

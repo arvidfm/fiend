@@ -1,0 +1,21 @@
+name: joseph_fire player_action: shoot
+weight: 4
+flame_num: -1 flame_length: 5 flame_x: 4 flame_y: -64
+light_r: -1 light_c: -1
+sound: joseph_shoot shot_length: 120 silent: 0
+max_ammo: 17
+num_of_missiles: 2 missile_angle: 20
+missile_x: 0 missile_y: 0
+shell_name: none
+shell_x: -4 shell_y: -15 shell_angle: 90 shell_after_shot_length: 0
+
+missile_name: null
+speed: 4.6
+range: 2000 range_dec: 0
+beam: 0
+min_damage: 70 max_damage: 90 damage_range: -1 damage_range_dec: 0
+explosion_name: fire_ball2 num_of_explosions: 3
+particle_name: fireball2 particle_num: 1
+strength: 50
+missile_light_r: 2 missile_light_c: 2
+hit_enemy: 0

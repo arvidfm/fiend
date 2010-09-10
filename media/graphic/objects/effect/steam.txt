@@ -1,0 +1,12 @@
+frames: 9
+name: effect_steam
+can_be_killed: 0 can_be_pushed: 0
+folder: Room_Stuff
+width: 16 height: 48 angles: 1 solid: 2 energy: 100
+door: 0 door_x: 0 door_y: 0
+additive: 1 trans: 0
+animations: 1
+solid: 0 name: temp sound: none loop_sound: 0 
+0 0 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 255 0 -1
+
+ 

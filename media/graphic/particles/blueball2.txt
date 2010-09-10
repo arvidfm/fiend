@@ -1,0 +1,8 @@
+frames: 1
+name: blueball2
+aa: 1 
+trans: 0
+trans_alpha: 0
+rotate: 0
+0 255 0 -1
+

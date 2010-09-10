@@ -1,0 +1,11 @@
+gun.txt
+uzi.txt
+357.txt
+rifle.txt
+wolf_claws.txt
+rat_claws.txt
+ghoul_attack.txt
+joseph_fire.txt
+joseph_knife.txt
+shoggoth.txt
+dart_rifle.txt

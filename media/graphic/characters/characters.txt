@@ -1,0 +1,6 @@
+nick nick.txt
+george george.txt
+farmer_m1 farmer_m1.txt
+farmer_m2 farmer_m2.txt
+farmer_f1 farmer_f1.txt
+farmer_f2 farmer_f2.txt

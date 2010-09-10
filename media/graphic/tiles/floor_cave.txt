@@ -1,0 +1,17 @@
+name: floor_cave
+1_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-stone
+2_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-stone
+3_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-stone
+4_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-stone
+5_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-stone
+6_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-stone
+7_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-stone
+8_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-stone
+9_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-stone
+10_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-stone
+11_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-stone
+12_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-stone
+13_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-stone
+14_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-stone
+15_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-stone
+16_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-stone

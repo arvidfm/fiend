@@ -1,0 +1,12 @@
+name: floor_house
+0_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal
+1_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-wood
+2_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-tile
+3_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal
+4_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-wood
+5_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-wood
+6_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-wood
+7_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-tile
+8_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-tile
+9_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-wood
+10_masked: 0 trans: 0 solid: 0 next_tile: -1 anim_speed: 0 sound: step-normal

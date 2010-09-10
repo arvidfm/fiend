@@ -1,0 +1,22 @@
+name: 357 player_action: shoot_gun
+weight: 4
+flame_num: 0 flame_length: 5 flame_x: 4 flame_y: -64
+light_r: 1 light_c: 1
+sound: 9mm gunshot_length: 20 silent: 0
+max_ammo: 17
+num_of_missiles: 1 missile_angle: 2
+missile_x: 4 missile_y: -40
+shell_name: shell01
+shell_x: -4 shell_y: -15 shell_angle: 90 shell_after_shot_length: 0
+
+missile_name: null
+speed: 3
+range: 400 range_dec: 0
+beam: 1
+min_damage: 10 max_damage: 16 damage_range: -1 damage_range_dec: 0.03
+explosion_name: normal num_of_explosions: 1
+particle_name: null particle_num: 0
+strength: 7
+missile_light_r: -1 missile_light_c: -1
+hit_enemy: 1
+
