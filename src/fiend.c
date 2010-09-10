@@ -34,7 +34,7 @@ int fiend_sound_buffer_size=100;
 int fiend_music_volume=160;
 int fiend_sound_driver=0;
 
-int fiend_gfx_driver=GFX_DIRECTX;
+int fiend_gfx_driver=GFX_AUTODETECT;
 
 int game_complete=0;
 		
