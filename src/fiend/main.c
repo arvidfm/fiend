@@ -13,7 +13,7 @@
 
 
 
-char map_file[80] = "maps\\lauder_alive\\lauder.map";
+char map_file[80] = "maps/lauder_alive/lauder.map";
 
 
 //some variables
@@ -180,11 +180,11 @@ void the_game(void)
 	}
 	else if(fiend_load_saved_game)
 	{
-		if(ans == 1)load_game("save\\save1.sav");
-		else if(ans == 2)load_game("save\\save2.sav");
-		else if(ans == 3)load_game("save\\save3.sav");
-		else if(ans == 4)load_game("save\\save4.sav");
-		else if(ans == 5)load_game("save\\save5.sav");
+		if(ans == 1)load_game("save/save1.sav");
+		else if(ans == 2)load_game("save/save2.sav");
+		else if(ans == 3)load_game("save/save3.sav");
+		else if(ans == 4)load_game("save/save4.sav");
+		else if(ans == 5)load_game("save/save5.sav");
 	}
 	
 	//--End that shit

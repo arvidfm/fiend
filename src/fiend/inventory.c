@@ -50,11 +50,11 @@ static BITMAP *inv_notes;
 
 int load_inventory_gfx(void)
 {
-	inv_items = load_bitmap("graphic\\menu\\inv_items.bmp",NULL);
+	inv_items = load_bitmap("graphic/menu/inv_items.bmp",NULL);
 	if(inv_items==NULL){strcpy(fiend_errorcode,"couldn't load inv_items.bmp");return 1;}
-	inv_weapons = load_bitmap("graphic\\menu\\inv_weapons.bmp",NULL);
+	inv_weapons = load_bitmap("graphic/menu/inv_weapons.bmp",NULL);
 	if(inv_weapons==NULL){strcpy(fiend_errorcode,"couldn't load inv_wepons.bmp");return 1;}
-	inv_notes = load_bitmap("graphic\\menu\\inv_notes.bmp",NULL);
+	inv_notes = load_bitmap("graphic/menu/inv_notes.bmp",NULL);
 	if(inv_notes==NULL){strcpy(fiend_errorcode,"couldn't load inv_notes.bmp");return 1;}
 	
 	return 0;
@@ -322,7 +322,7 @@ void update_inventory_graphic(void)
 		
 		for(i=0;i<5;i++)
 		{
-			sprintf(string2,"save\\save%d.sav",i+1);
+			sprintf(string2,"save/save%d.sav",i+1);
 		
 			if(exists(string2))
 			{
@@ -677,7 +677,7 @@ void update_inventory_logic(void)
 			inventory_is_on=0;
 			player.active=1;
 						
-			sprintf(string,"save\\save%d.sav",menu_row+1);
+			sprintf(string,"save/save%d.sav",menu_row+1);
 			save_game(string,map->name);
 			current_menu=0;
 			menu_row=0;

@@ -12,8 +12,8 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "..//fiend.h"
-#include "..//grafik4.h"
+#include "../fiend.h"
+#include "../grafik4.h"
 
 
 
@@ -298,7 +298,7 @@ int play_fiend_music(char* file, int loop)
 		FMUSIC_FreeSong(music_data);
 	}
 		
-	sprintf(path,"music\\%s",file);
+	sprintf(path,"music/%s",file);
 	
 	if(loop)
 	{

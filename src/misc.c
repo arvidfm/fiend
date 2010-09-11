@@ -653,10 +653,10 @@ void draw_flames(void)
 int load_flames(void)
 {	
 	
-	flame_pic = load_bmp_array("graphic\\misc\\flames",-1);
+	flame_pic = load_bmp_array("graphic/misc/flames",-1);
 	
 	if(flame_pic==NULL)
-	{sprintf(fiend_errorcode,"couldn't load flames\\");return 1;}
+	{sprintf(fiend_errorcode,"couldn't load flames/");return 1;}
 
 	return 0;
 }

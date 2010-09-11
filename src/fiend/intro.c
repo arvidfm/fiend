@@ -9,10 +9,10 @@
 #include <allegro.h>
 #include <stdio.h>
 
-#include "..//grafik4.h"
+#include "../grafik4.h"
 
 
-#include "..//fiend.h"
+#include "../fiend.h"
 
 DATAFILE *font_intro;
 
@@ -29,7 +29,7 @@ void show_gripdesign(void)
 	int alpha=255;
 
 
-	bmp2 = load_bitmap("graphic\\menu\\logo.pcx",NULL);
+	bmp2 = load_bitmap("graphic/menu/logo.pcx",NULL);
 	bmp = create_bitmap(480,480);
 	
 	stretch_sprite(bmp,bmp2,0,0,480,480);
@@ -231,7 +231,7 @@ void show_intro_text(void)
 	
 	//clear_to_color(bmp,makecol(255,0,255));
 
-	//font_intro = load_datafile("graphic\\fonts\\intro.dat");
+	//font_intro = load_datafile("graphic/fonts/intro.dat");
 	//if(font_intro==NULL){allegro_message("couldn't load font intro");return;}
 		
 	fiend_fadeout(8);
@@ -241,7 +241,7 @@ void show_intro_text(void)
 
 	speed_counter = 0;
 	
-	pic = load_bitmap("graphic\\menu\\intro1.pcx",NULL);
+	pic = load_bitmap("graphic/menu/intro1.pcx",NULL);
 	stretch_sprite(bmp2, pic,0,0,480,480);
 	destroy_bitmap(pic);
 
@@ -260,7 +260,7 @@ void show_intro_text(void)
 			}
 			if(time==2000)
 			{
-				pic = load_bitmap("graphic\\menu\\intro2.pcx",NULL);
+				pic = load_bitmap("graphic/menu/intro2.pcx",NULL);
 				stretch_sprite(bmp2, pic,0,0,480,480);
 				destroy_bitmap(pic);
 
@@ -276,7 +276,7 @@ void show_intro_text(void)
 			}
 			if(time==5000)
 			{
-				pic = load_bitmap("graphic\\menu\\intro3.pcx",NULL);
+				pic = load_bitmap("graphic/menu/intro3.pcx",NULL);
 				stretch_sprite(bmp2, pic,0,0,480,480);
 				destroy_bitmap(pic);
 

@@ -61,14 +61,14 @@ int load_tiles(void)
 	char tile_file_name[100][60];
     char info_file_name[100][60];
 	int num_of_tiles=1;
-	char *file_path ="graphic\\tiles\\";
+	char *file_path ="graphic/tiles/";
 	char final_path[40];
 	int i;
 
 	
 	tile_info = calloc(sizeof(TILESET_INFO), MAX_TILES);
 
-	f = fopen("graphic\\tiles\\tiles.txt", "r");      //Load the Info file
+	f = fopen("graphic/tiles/tiles.txt", "r");      //Load the Info file
 	
 	if(f==NULL)
 	{sprintf(fiend_errorcode,"couldn't load tiles.txt");return 1;} //error testing...

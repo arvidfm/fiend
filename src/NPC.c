@@ -13,7 +13,7 @@
 
 
 
-char npc_filename[80] = "maps\\npc.inf";
+char npc_filename[80] = "maps/npc.inf";
 
 
 NPC_DATA *npc_data;

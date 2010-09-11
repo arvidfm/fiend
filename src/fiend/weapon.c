@@ -11,8 +11,8 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "..//fiend.h"
-#include "..//grafik4.h"
+#include "../fiend.h"
+#include "../grafik4.h"
 
 
 
@@ -54,7 +54,7 @@ int load_weapons(void)
 	char buffer[50];
 	char info_file_name[100][70];
 	int num_of_tiles=1;
-	char *file_path ="data\\weapons\\";
+	char *file_path ="data/weapons/";
 	char final_path[40];
 	int i;
 
@@ -66,7 +66,7 @@ int load_weapons(void)
 		missile_data[i].used=0;
 
 
-	f = fopen("data\\weapons\\weapons.txt", "r");      //Load the Info file
+	f = fopen("data/weapons/weapons.txt", "r");      //Load the Info file
 	
 	if(f==NULL)
 	{sprintf(fiend_errorcode,"couldn't load weapons.txt");return 1;} //error testing...

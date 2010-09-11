@@ -20,7 +20,7 @@
 
 
 //the file name that enemy data is loaded from
-char enemy_filename[80] = "maps\\enemy.inf";
+char enemy_filename[80] = "maps/enemy.inf";
 
 
 ENEMY_DATA *enemy_data;
@@ -43,13 +43,13 @@ int load_enemys(void)
 	char sprite_file_name[100][15];
     char info_file_name[100][15];
 	int num_of_frames=1;
-	char *file_path ="graphic\\enemies\\";
+	char *file_path ="graphic/enemies/";
 	char final_path[40];
 	int i,j,k,r,g,b;
 	
 	enemy_info = calloc(sizeof(ENEMY_INFO), MAX_ENEMY_INFO);
 
-	f = fopen("graphic\\enemies\\enemies.txt", "r");      //Load the Info file
+	f = fopen("graphic/enemies/enemies.txt", "r");      //Load the Info file
 	
 	if(f==NULL)
 	{sprintf(fiend_errorcode,"couldn't load enemys.txt");return 1;} //error testing...

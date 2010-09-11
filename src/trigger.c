@@ -25,13 +25,13 @@ SAVED_ROOM_OBJECT saved_object[MAX_ROOM_NUM];
 
 
 
-char global_var_filename[80] = "maps\\vars.inf";
+char global_var_filename[80] = "maps/vars.inf";
 
 
 VARIABLE_DATA *global_var;
 
 
-char global_trigger_filename[80] = "maps\\trigger.inf";
+char global_trigger_filename[80] = "maps/trigger.inf";
 
 TRIGGER_DATA *global_trigger;
 
@@ -81,11 +81,11 @@ int load_message_faces(void)
 {
 	int i;
 
-	i= for_each_file("graphic\\faces\\*.bmp",_A_NORMAL|_A_ARCH,get_one_face,0);
+	i= for_each_file("graphic/faces/*.bmp",_A_NORMAL|_A_ARCH,get_one_face,0);
 
 	if(face_load_error || i<1)
 	{
-		strcpy(fiend_errorcode,"couldn't load graphic\\faces\\*.bmp");
+		strcpy(fiend_errorcode,"couldn't load graphic/faces/*.bmp");
 		return 1;
 	}
 

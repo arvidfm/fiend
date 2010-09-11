@@ -19,7 +19,7 @@
 
 
 
-char item_filename[80] = "maps\\item.inf";
+char item_filename[80] = "maps/item.inf";
 
 float item_light=128;
 float item_light_add=4.5;
@@ -43,7 +43,7 @@ int load_items(void)
 	item_info = calloc(sizeof(ITEM_INFO), MAX_ITEM_INFO);
 	
 															 
-	f = fopen("graphic\\misc\\items.txt", "r");
+	f = fopen("graphic/misc/items.txt", "r");
 	if(f==NULL){sprintf(fiend_errorcode,"couldn't load items.txt"); return 1;}//error testing...
 	
 	while(fscanf(f,"%s %s %s %d %s %d %s %d %s %d %s %s %s %s\n",buffer,&item_info[num_of_items].name,buffer,&item_info[num_of_items].w,buffer,&item_info[num_of_items].h, buffer,&item_info[num_of_items].num, buffer, &item_info[num_of_items].type, buffer, item_info[num_of_items].s_string, buffer,item_info[num_of_items].desc)!=EOF)
@@ -53,10 +53,10 @@ int load_items(void)
 		
 	fclose(f);
 
-	//big_item_pic = load_datafile("graphic\\misc\\big_items.dat");//load the graphic
+	//big_item_pic = load_datafile("graphic/misc/big_items.dat");//load the graphic
 	///if(big_item_pic==NULL) {sprintf(fiend_errorcode,"couldn't load big_items.dat");return 1;}//error testing...
-	item_pic = load_rle_array("graphic\\misc\\items",num_of_items);//load the graphic
-	if(item_pic==NULL) {sprintf(fiend_errorcode,"couldn't load items\\");return 1;}//error testing...
+	item_pic = load_rle_array("graphic/misc/items",num_of_items);//load the graphic
+	if(item_pic==NULL) {sprintf(fiend_errorcode,"couldn't load items/");return 1;}//error testing...
 	
 
 	return 0;

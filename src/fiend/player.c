@@ -491,7 +491,7 @@ void player_death(void)
 	{
 		show_intro_text();
 					
-		if(!load_edit_map(map, "maps\\lauder_alive\\lauder.map"))
+		if(!load_edit_map(map, "maps/lauder_alive/lauder.map"))
 		{
 			allegro_message("Couldn't load map \"%s\".",map_file);
 			return;
@@ -529,11 +529,11 @@ void player_death(void)
 	}
 	else if(fiend_load_saved_game)
 	{
-		if(ans == 1)load_game("save\\save1.sav");
-		else if(ans == 2)load_game("save\\save2.sav");
-		else if(ans == 3)load_game("save\\save3.sav");
-		else if(ans == 4)load_game("save\\save4.sav");
-		else if(ans == 5)load_game("save\\save5.sav");
+		if(ans == 1)load_game("save/save1.sav");
+		else if(ans == 2)load_game("save/save2.sav");
+		else if(ans == 3)load_game("save/save3.sav");
+		else if(ans == 4)load_game("save/save4.sav");
+		else if(ans == 5)load_game("save/save5.sav");
 	}
 	
 
@@ -578,7 +578,7 @@ void update_global_keys(void)
 		{
 			show_intro_text();
 					
-			if(!load_edit_map(map, "maps\\lauder_alive\\lauder.map"))
+			if(!load_edit_map(map, "maps/lauder_alive/lauder.map"))
 			{
 				allegro_message("Couldn't load map \"%s\".",map_file);
 				return;
@@ -616,11 +616,11 @@ void update_global_keys(void)
 		}
 		else if(fiend_load_saved_game)
 		{
-			if(ans == 1)load_game("save\\save1.sav");
-			else if(ans == 2)load_game("save\\save2.sav");
-			else if(ans == 3)load_game("save\\save3.sav");
-			else if(ans == 4)load_game("save\\save4.sav");
-			else if(ans == 5)load_game("save\\save5.sav");
+			if(ans == 1)load_game("save/save1.sav");
+			else if(ans == 2)load_game("save/save2.sav");
+			else if(ans == 3)load_game("save/save3.sav");
+			else if(ans == 4)load_game("save/save4.sav");
+			else if(ans == 5)load_game("save/save5.sav");
 		}
 	
 

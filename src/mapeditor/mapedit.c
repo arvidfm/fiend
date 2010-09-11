@@ -375,7 +375,7 @@ int init_mapeditor(void)
 	
 	create_wall_shadows();
 		
-	misc =load_datafile("graphic\\misc.dat");
+	misc =load_datafile("graphic/misc.dat");
 	
 	//Make a map...
 	map = calloc(sizeof(MAP_DATA),1);

@@ -669,31 +669,31 @@ static void update_menu_logic(void)
 			}
 			else if(current_menu == MENU_LOADGAME)
 			{
-				if(menu_row == 0 && exists("save\\save1.sav"))
+				if(menu_row == 0 && exists("save/save1.sav"))
 				{
 					return_value = 1;
 					fiend_load_saved_game = 1;
 					quit_menu=1;
 				}
-				else if(menu_row == 1 && exists("save\\save2.sav"))
+				else if(menu_row == 1 && exists("save/save2.sav"))
 				{
 					return_value = 2;
 					fiend_load_saved_game = 1;
 					quit_menu=1;
 				}
-				else if(menu_row == 2 && exists("save\\save3.sav"))
+				else if(menu_row == 2 && exists("save/save3.sav"))
 				{
 					return_value = 3;
 					fiend_load_saved_game = 1;
 					quit_menu=1;
 				}
-				else if(menu_row == 3 && exists("save\\save4.sav"))
+				else if(menu_row == 3 && exists("save/save4.sav"))
 				{
 					return_value = 4;
 					fiend_load_saved_game = 1;
 					quit_menu=1;
 				}
-				else if(menu_row == 4 && exists("save\\save5.sav"))
+				else if(menu_row == 4 && exists("save/save5.sav"))
 				{
 					return_value = 5;
 					fiend_load_saved_game = 1;
@@ -865,8 +865,8 @@ int fiend_menu(int in_game)
 
 	pause_fiend_music();
 	
-	bmp_back = load_bitmap("graphic\\menu\\menu_back.pcx",NULL);
-	if(bmp_back==NULL){allegro_message("couldn't load graphic\\menu\\menu_back.pcx");return 1;}
+	bmp_back = load_bitmap("graphic/menu/menu_back.pcx",NULL);
+	if(bmp_back==NULL){allegro_message("couldn't load graphic/menu/menu_back.pcx");return 1;}
 
 	for(i=0;i<MAX_ROWS;i++)
 	{
@@ -876,10 +876,10 @@ int fiend_menu(int in_game)
 	}
 	
 	bmp_fade = create_bitmap(480,330);
-	font_menu = load_datafile("graphic\\fonts\\menu.dat");
+	font_menu = load_datafile("graphic/fonts/menu.dat");
 	if(font_menu==NULL){allegro_message("couldn't load font menu");return 1;}
 	
-	font_menu2 = load_datafile("graphic\\fonts\\arial.dat");
+	font_menu2 = load_datafile("graphic/fonts/arial.dat");
 	if(font_menu2==NULL){allegro_message("couldn't load font arial");return 1;}
 	
 	current_menu = MENU_MAIN;

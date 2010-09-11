@@ -220,7 +220,7 @@ int load_particles(void)
 	char buffer[50];
 	char sprite_file_name[100][20];
     char info_file_name[100][20];
-	char *file_path ="graphic\\particles\\";
+	char *file_path ="graphic/particles/";
 	char final_path[40];
 	int i,k;
 	
@@ -230,7 +230,7 @@ int load_particles(void)
 	for(i=0;i<MAX_PARTICLE_DATA;i++)
 		particle_data[i].used=0;
 	
-	f = fopen("graphic\\particles\\particles.txt", "r");      //Load the Info file
+	f = fopen("graphic/particles/particles.txt", "r");      //Load the Info file
 	
 	if(f==NULL)
 	{sprintf(fiend_errorcode,"couldn't load particles.txt");return 1;} //error testing...

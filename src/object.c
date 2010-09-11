@@ -196,13 +196,13 @@ int load_objects(void)
 	char buffer[50];
 	char sprite_file_name[300][30];
     char info_file_name[300][30];
-	char *file_path ="graphic\\objects\\";
+	char *file_path ="graphic/objects/";
 	char final_path[40];
 	int i,j,k,temp;
 	
 	object_info = calloc(sizeof(OBJECT_INFO),MAX_OBJECTS);
 	
-	f = fopen("graphic\\objects\\objects.txt", "r");      //Load the Info file
+	f = fopen("graphic/objects/objects.txt", "r");      //Load the Info file
 	
 	if(f==NULL)
 	{sprintf(fiend_errorcode,"couldn't load objects.txt");return 1;} //error testing...

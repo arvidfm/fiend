@@ -54,7 +54,7 @@ static int csl_save_game(void)
 	}
 	else
 	{
-		sprintf(path,"save\\%s",csl_argv(1));
+		sprintf(path,"save/%s",csl_argv(1));
 
 		if(!save_game(path,"Console Save"))
 		{
@@ -88,7 +88,7 @@ static int csl_load_game(void)
 	}
 	else
 	{
-		sprintf(path,"save\\%s",csl_argv(1));
+		sprintf(path,"save/%s",csl_argv(1));
 
 		if(!load_game(path))
 		{

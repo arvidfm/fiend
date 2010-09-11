@@ -66,7 +66,7 @@ int init_fiend2(void)
 
 	clear(screen);
 
-	bmp = load_bitmap("graphic\\menu\\menu_back.pcx",NULL);
+	bmp = load_bitmap("graphic/menu/menu_back.pcx",NULL);
 	
 	stretch_sprite(screen, bmp,80,60,480,200);
 
@@ -142,25 +142,25 @@ int init_fiend2(void)
 	//csl_textout(2,"Loading font data...");
 	rectfill(screen,30+80,420,415+80,460,makecol(160,20,10));
 	//Load the fonts
-	font_avalon = load_datafile("graphic\\fonts\\avalon.dat");
+	font_avalon = load_datafile("graphic/fonts/avalon.dat");
 	if(font_avalon==NULL){ 
 		strcpy(fiend_errorcode,"couldn't load font avalon");
 		return CSLMSG_QUIT;
     }
 	
-	font_arial = load_datafile("graphic\\fonts\\arial.dat");
+	font_arial = load_datafile("graphic/fonts/arial.dat");
 	if(font_arial==NULL){
 		strcpy(fiend_errorcode,"couldn't load font arial");
 		return CSLMSG_QUIT;
     }
 	
-	font_avalon2 = load_datafile("graphic\\fonts\\avalon2.dat");
+	font_avalon2 = load_datafile("graphic/fonts/avalon2.dat");
 	if(font_avalon2==NULL){ 
 		strcpy(fiend_errorcode,"couldn't load font avalon2");
 		return CSLMSG_QUIT;
     }
 	
-	font_small2 = load_datafile("graphic\\fonts\\small2.dat");
+	font_small2 = load_datafile("graphic/fonts/small2.dat");
 	if(font_small2==NULL){ 
 		strcpy(fiend_errorcode,"couldn't load font small2");
 		return CSLMSG_QUIT;
@@ -212,7 +212,7 @@ int init_fiend(void)
 	
 	clear(screen);
 
-	//bmp = load_pcx("graphic\\menu\\loading.pcx",NULL);
+	//bmp = load_pcx("graphic/menu/loading.pcx",NULL);
 
     csl_bkgd = create_bitmap(480,480);
 	clear(csl_bkgd);
@@ -220,7 +220,7 @@ int init_fiend(void)
 
     //destroy_bitmap(bmp);
 
-	font_small1 = load_datafile("graphic\\fonts\\small1.dat");
+	font_small1 = load_datafile("graphic/fonts/small1.dat");
 	if(font_small1==NULL)
     {
 		strcpy(fiend_errorcode,"couldn't load font small1");

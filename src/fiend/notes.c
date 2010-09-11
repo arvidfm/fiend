@@ -191,7 +191,7 @@ int load_fiend_note(char *file)
 
 void read_fiend_note(char *file)
 {
-	char *file_path ="data\\notes\\";
+	char *file_path ="data/notes/";
 	char final_path[80];
 	char error[70];
 	

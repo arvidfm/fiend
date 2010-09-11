@@ -42,14 +42,14 @@ int load_characters(void)
 	char sprite_file_name[100][15];
     char info_file_name[100][15];
 	int num_of_frames=1;
-	char *file_path ="graphic\\characters\\";
+	char *file_path ="graphic/characters/";
 	char final_path[40];
 	int i,j,k;
 	
 	
 	char_info = calloc(sizeof(CHARACTER_INFO), MAX_CHARACTERS);
 
-	f = fopen("graphic\\characters\\characters.txt", "r");      //Load the Info file
+	f = fopen("graphic/characters/characters.txt", "r");      //Load the Info file
 	
 	if(f==NULL)
 	{sprintf(fiend_errorcode,"couldn't find characters.txt");return 1;} //error testing...

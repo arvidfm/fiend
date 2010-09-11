@@ -28,7 +28,7 @@ int load_sounds(void)
 	FILE *f;
 
 	char sound_file_name[70];
-   	char *file_path ="sound\\";
+   	char *file_path ="sound/";
 	char final_path[80];
 	char *name;
 	char name2[40];
@@ -38,7 +38,7 @@ int load_sounds(void)
 	
 	sound_info = calloc(sizeof(SOUND_INFO), MAX_SOUNDS);
 
-	f = fopen("sound\\sounds.txt", "r");      //Load the Info file
+	f = fopen("sound/sounds.txt", "r");      //Load the Info file
 	
 	if(f==NULL)
 	{sprintf(fiend_errorcode,"couldn't load sounds.txt");return 1;} //error testing...
