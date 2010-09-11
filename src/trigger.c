@@ -81,7 +81,7 @@ int load_message_faces(void)
 {
 	int i;
 
-	i= for_each_file("graphic/faces/*.bmp",_A_NORMAL|_A_ARCH,get_one_face,0);
+	i= for_each_file("graphic/faces/*.bmp",FA_ARCH,get_one_face,0);
 
 	if(face_load_error || i<1)
 	{

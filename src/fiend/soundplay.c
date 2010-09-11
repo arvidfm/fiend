@@ -120,11 +120,12 @@ int play_fiend_sound(char *name, int x, int y,int lower_at_dist,int loop,int pri
 	FSOUND_Sample_SetDefaults(sound_info[num].sound,-1,vol,pan,sound_data[i].priority);
 	
 	if(sound_data[i].loop)
-		FSOUND_Sample_SetLoopMode(sound_info[num].sound,FSOUND_LOOP_NORMAL);
+		FMOD_Sound_SetLoopCount(sound_info[num].sound,FMOD_LOOP_NORMAL);
 
 	
-	sound_data[i].voice_num=FSOUND_PlaySound(FSOUND_FREE, sound_info[num].sound);
-	if(sound_data[i].voice_num==-1)return -1;
+	//sound_data[i].voice_num=FSOUND_PlaySound(FSOUND_FREE, sound_info[num].sound);
+	FMOD_System_PlaySound(fmod_system, FMOD_CHANNEL_FREE, sound_info[num].sound, 0, &sound_data[i].voice_num);
+	if(sound_data[i].voice_num==NULL)return -1;
 	
 	sound_data[i].playing=1;
 	
@@ -279,7 +280,8 @@ void resume_all_sounds(void)
 
 char current_music[50] ="none";
 int music_is_looping=0;
-static FMUSIC_MODULE *music_data;
+static FMOD_CHANNEL *fmod_music_channel;
+static FMOD_SOUND *music_sound;
 static int music_channel;
 
 int play_fiend_music(char* file, int loop)
@@ -294,24 +296,25 @@ int play_fiend_music(char* file, int loop)
 	
 	if(strcmp(current_music,"none")!=0)
 	{
-		FMUSIC_StopSong(music_data);
-		FMUSIC_FreeSong(music_data);
+		FMOD_Channel_Stop(fmod_music_channel);
+		FMOD_Sound_Release(music_sound);
 	}
-		
+	
 	sprintf(path,"music/%s",file);
 	
 	if(loop)
 	{
-		music_data = FMUSIC_LoadSong(path);
+		
+		FMOD_System_CreateSound(fmod_system, path, FMOD_SOFTWARE | FMOD_CREATESTREAM, &soundex_info, &music_sound);
 		music_is_looping = 1;
 	}
 	else
 	{
-		music_data = FMUSIC_LoadSong(path);
+		FMOD_System_CreateSound(fmod_system, path, FMOD_SOFTWARE | FMOD_CREATESTREAM, &soundex_info, &music_sound);
 		music_is_looping=0;
 	}
 	
-	if(music_data==NULL)
+	if(music_sound==NULL)
 	{
 		sprintf(error_string,"Error loading stream \"%s\" ",path);
 		make_engine_error(error_string);
@@ -319,9 +322,9 @@ int play_fiend_music(char* file, int loop)
 	}
 	
 	strcpy(current_music,file);
-		
+	
 	speed_counter=0;
-	FMUSIC_PlaySong(music_data);
+	FMOD_System_PlaySound(fmod_system, FMOD_CHANNEL_FREE, music_sound, 0, &fmod_music_channel);
 	
 	set_fiend_music_volume(fiend_music_volume);
 	
@@ -333,7 +336,7 @@ void set_fiend_music_volume(int vol)
 {
 	//if(music_channel <0 || sound_is_on==0)return;
 
-	FMUSIC_SetMasterVolume(music_data, vol);
+	FMOD_Channel_SetVolume(fmod_music_channel, ((float)vol)/100);
 
 }
 
@@ -345,8 +348,8 @@ void stop_fiend_music(void)
 	
 	if(strcmp(current_music,"none")!=0)
 	{
-		FMUSIC_StopSong(music_data);
-		FMUSIC_FreeSong(music_data);
+		FMOD_Channel_Stop(fmod_music_channel);
+		FMOD_Sound_Release(music_sound);
 		music_channel = -1;
 
 		strcpy(current_music,"none");
@@ -358,10 +361,11 @@ void pause_fiend_music(void)
 	if(!sound_is_on)return;
 	if(strcmp(current_music,"none")==0)return;
 	
-	
-	if(FMUSIC_GetPaused(music_data)==FALSE)
+	FMOD_BOOL paused;
+	FMOD_Channel_GetPaused(fmod_music_channel, &paused);
+	if(!paused)
 	{
-		FMUSIC_SetPaused(music_data, TRUE);
+		FMOD_Channel_SetPaused(fmod_music_channel, TRUE);
 	}
 }
 
@@ -371,11 +375,12 @@ void resume_fiend_music(void)
 	if(strcmp(current_music,"none")==0)return;
 	
 	
-	if(FMUSIC_GetPaused(music_data)!=FALSE)
+	FMOD_BOOL paused;
+	FMOD_Channel_GetPaused(fmod_music_channel, &paused);
+	if(paused)
 	{
-		FMUSIC_SetPaused(music_data, FALSE);
+		FMOD_Channel_SetPaused(fmod_music_channel, FALSE);
 	}
-
 }
 
 

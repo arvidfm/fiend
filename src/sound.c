@@ -19,6 +19,10 @@ SOUND_INFO *sound_info;
 
 SOUND_DATA *sound_data;
 
+FMOD_SYSTEM *fmod_system;
+FMOD_CHANNEL *fmod_channel = NULL;
+FMOD_CREATESOUNDEXINFO soundex_info;
+
 int num_of_sounds=0;
 
 
@@ -35,6 +39,11 @@ int load_sounds(void)
 	int i;
 	unsigned int j,k;
 	
+	FMOD_System_Create(&fmod_system);
+	FMOD_System_Init(fmod_system, 32, FMOD_INIT_NORMAL, NULL);
+	
+	memset(&soundex_info, 0, sizeof(FMOD_CREATESOUNDEXINFO));
+	soundex_info.cbsize   = sizeof(FMOD_CREATESOUNDEXINFO);
 	
 	sound_info = calloc(sizeof(SOUND_INFO), MAX_SOUNDS);
 
@@ -67,7 +76,9 @@ int load_sounds(void)
 		strcpy(final_path, file_path);
 		strcat(final_path, sound_file_name);
 		
-		sound_info[num_of_sounds].sound = FSOUND_Sample_Load(FSOUND_FREE,final_path,FSOUND_2D,0);//load the sound
+		//sound_info[num_of_sounds].sound = FSOUND_Sample_Load(FSOUND_FREE,final_path,FSOUND_2D,0);//load the sound
+		
+		FMOD_System_CreateSound(fmod_system, final_path, FMOD_2D, &soundex_info, &sound_info[num_of_sounds].sound);
 		
 		if(sound_info[num_of_sounds].sound==NULL){allegro_message("couldn't load %s",final_path);exit(-1);}//error testing...
 		
@@ -92,7 +103,7 @@ void free_sounds(void)
  int i;
 
  for(i=0;i<num_of_sounds;i++)
-	 FSOUND_Sample_Free(sound_info[i].sound);
+	 FMOD_Sound_Release(sound_info[i].sound);
 
 
  free(sound_info);

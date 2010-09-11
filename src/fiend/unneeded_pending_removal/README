@@ -1,0 +1,6 @@
+These are files that were in /src/fiend when uploaded. I don't think any of these files are needed, but
+it would be best to look into it first to make sure no files that are needed get deleted. Also,
+Fiend.vcproj might be good to keep.
+Also, I'm kind of hesitant to remove these files considering that they are almost ten years old,
+kind of feels like history. Of course, the original source archive uploaded by Thomas Grip is
+still there, but still.

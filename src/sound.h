@@ -22,7 +22,7 @@ typedef struct
 typedef struct 
 {
 	int used;
-	int voice_num;
+	FMOD_CHANNEL *voice_num;
 	int sound_num;
 	int x;
 	int y;
@@ -38,6 +38,10 @@ extern int num_of_sounds;
 
 extern SOUND_INFO *sound_info;
 extern SOUND_DATA *sound_data;
+
+extern FMOD_SYSTEM *fmod_system;
+extern FMOD_CHANNEL *fmod_channel;
+extern FMOD_CREATESOUNDEXINFO soundex_info;
 // the functions
 
 

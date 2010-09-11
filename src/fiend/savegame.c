@@ -407,9 +407,9 @@ int load_game(char *file)
 			{
 				if(sound_data[i].loop)
 				{
-					sound_data[i].voice_num=FSOUND_PlaySound(FSOUND_FREE, sound_info[sound_data[i].sound_num].sound);
-				
-					FSOUND_SetLoopMode(sound_data[i].voice_num, FSOUND_LOOP_NORMAL);
+					//sound_data[i].voice_num=FSOUND_PlaySound(FSOUND_FREE, sound_info[sound_data[i].sound_num].sound);
+					FMOD_System_PlaySound(fmod_system, FMOD_CHANNEL_FREE, sound_info[sound_data[i].sound_num].sound, 0, &sound_data[i].voice_num);
+					FMOD_CHANNEL_SetLoopCount(sound_data[i].voice_num, FMOD_LOOP_NORMAL);
 		
 					sound_data[i].playing=1;
 				}

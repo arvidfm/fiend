@@ -1,6 +1,6 @@
 FIND_PATH(FMOD_INCLUDE_DIR fmod.h /usr/include/fmodex /usr/local/include/fmodex)
 
-FIND_LIBRARY(FMOD_LIBRARY NAMES fmodexp PATH /usr/lib /usr/local/lib) 
+FIND_LIBRARY(FMOD_LIBRARY NAMES fmodex PATH /usr/lib /usr/local/lib) 
 
 IF (FMOD_INCLUDE_DIR AND FMOD_LIBRARY)
    SET(FMOD_FOUND TRUE)

@@ -81,7 +81,6 @@ static int alpha = 0;
 
 static int text_alpha[MAX_ROWS];
 
-
 int play_menu_sound(char *name, int loop)
 {
 	int i,num;
@@ -110,16 +109,14 @@ int play_menu_sound(char *name, int loop)
 		num+=temp;
 	}
 	
-	
 	FSOUND_Sample_SetDefaults(sound_info[num].sound,-1,sound_info[num].volume,128,200);
 	
 	if(loop)
-		FSOUND_Sample_SetLoopMode(sound_info[num].sound,FSOUND_LOOP_NORMAL);
+		FMOD_Sound_SetLoopCount(sound_info[num].sound,FMOD_LOOP_NORMAL);
 
+	FMOD_System_PlaySound(fmod_system, FMOD_CHANNEL_FREE, sound_info[num].sound, 0, &fmod_channel);
 	
-	FSOUND_PlaySound(FSOUND_FREE, sound_info[num].sound);
-	
-	return 	i;	
+	return i;
 }
 
 
