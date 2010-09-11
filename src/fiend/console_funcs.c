@@ -147,8 +147,12 @@ static int csl_sound_volume(void)
 	{
 		fiend_sound_volume = atoi(csl_argv(1));
 		
-		if(sound_is_on)
-			FSOUND_SetSFXMasterVolume(fiend_sound_volume);
+		if(sound_is_on) {
+			//FSOUND_SetSFXMasterVolume(fiend_sound_volume);
+			FMOD_CHANNELGROUP *cgroup = NULL;
+			FMOD_System_GetMasterChannelGroup(fmod_system, &cgroup);
+			FMOD_ChannelGroup_SetVolume(cgroup, ((float)fiend_sound_volume)/256);
+		}
 
 		csl_textoutf(1, "Sound_volume is set to \"%d\".", fiend_sound_volume);
 	}

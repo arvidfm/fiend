@@ -117,7 +117,7 @@ int play_fiend_sound(char *name, int x, int y,int lower_at_dist,int loop,int pri
 		calc_sound_prop(sound_data[i].x,sound_data[i].y,&vol, &pan, sound_info[sound_data[i].sound_num].volume);
 				
 	
-	FSOUND_Sample_SetDefaults(sound_info[num].sound,-1,vol,pan,sound_data[i].priority);
+	FMOD_Sound_SetDefaults(sound_info[num].sound,44100,((float)vol)/256,pan,sound_data[i].priority);
 	
 	if(sound_data[i].loop)
 		FMOD_Sound_SetLoopCount(sound_info[num].sound,FMOD_LOOP_NORMAL);
@@ -150,10 +150,11 @@ void update_sound(void)
 	{
 		if(sound_data[i].used)
 		{
-			
-			if(FSOUND_IsPlaying(sound_data[i].voice_num)==FALSE)
+			FMOD_BOOL is_playing;
+			FMOD_Channel_IsPlaying(sound_data[i].voice_num, &is_playing);
+			if(is_playing==FALSE)
 			{
-				FSOUND_StopSound(sound_data[i].voice_num);
+				FMOD_Channel_Stop(sound_data[i].voice_num);
 				sound_data[i].used=0;
 			}
 			else
@@ -167,8 +168,8 @@ void update_sound(void)
 					calc_sound_prop(sound_data[i].x,sound_data[i].y,&vol, &pan, sound_info[sound_data[i].sound_num].volume);
 				
 								
-				FSOUND_SetVolume(sound_data[i].voice_num, vol);
-				FSOUND_SetPan(sound_data[i].voice_num, pan);
+				FMOD_Channel_SetVolume(sound_data[i].voice_num, ((float)vol)/256);
+				FMOD_Channel_SetPan(sound_data[i].voice_num, pan);
 
 			}
 
@@ -187,7 +188,7 @@ void stop_sound_num(int num)
 {
 	if(!sound_is_on)return;
 	
-	FSOUND_StopSound(sound_data[num].voice_num);
+	FMOD_Channel_Stop(sound_data[num].voice_num);
 	sound_data[num].used=0;
 }
 
@@ -230,7 +231,7 @@ void stop_all_sounds(void)
 	{
 		if(sound_data[i].used)
 		{
-			FSOUND_StopSound(sound_data[i].voice_num);
+			FMOD_Channel_Stop(sound_data[i].voice_num);
 			sound_data[i].used=0;
 		}
 	}
@@ -248,7 +249,7 @@ void pause_all_sounds(void)
 	{
 		if(sound_data[i].used)
 		{
-			FSOUND_SetPaused(sound_data[i].voice_num,TRUE);
+			FMOD_Channel_SetPaused(sound_data[i].voice_num,TRUE);
 			sound_data[i].used=0;
 		}
 	}
@@ -265,7 +266,7 @@ void resume_all_sounds(void)
 	{
 		if(sound_data[i].used)
 		{
-			FSOUND_SetPaused(sound_data[i].voice_num,FALSE);
+			FMOD_Channel_SetPaused(sound_data[i].voice_num,FALSE);
 			sound_data[i].used=0;
 		}
 	}
@@ -336,7 +337,7 @@ void set_fiend_music_volume(int vol)
 {
 	//if(music_channel <0 || sound_is_on==0)return;
 
-	FMOD_Channel_SetVolume(fmod_music_channel, ((float)vol)/100);
+	FMOD_Channel_SetVolume(fmod_music_channel, ((float)vol)/256);
 
 }
 

@@ -5,8 +5,6 @@
 // Code by Thomas Grip and Pierre Renaux
 ///////////////////////////////////////////////////
 
-#include <ctype.h>
-
 
 #include "fiend.h"
 #include "draw.h"
@@ -38,8 +36,12 @@ int fiend_sound_driver=0;
 int fiend_gfx_driver=GFX_AUTODETECT;
 
 int game_complete=0;
-		
 
+
+
+FMOD_SYSTEM *fmod_system;
+FMOD_CHANNEL *fmod_channel = NULL;
+FMOD_CREATESOUNDEXINFO soundex_info;
 
 //some drawing stuff
 BITMAP *virt;
@@ -195,17 +197,28 @@ int init_fiend(void)
 	
 	if(sound_is_on)
 	{
-		FSOUND_SetDriver(fiend_sound_driver);
+		FMOD_System_Create(&fmod_system);
+		FMOD_RESULT result = FMOD_System_Init(fmod_system, 32, FMOD_INIT_NORMAL, NULL);
 
 		//FSOUND_SetBufferSize(fiend_sound_buffer_size);
 	
-		if(!FSOUND_Init(44100, 32, 0))
+		if(result != FMOD_OK)
 		{
 			strcpy(fiend_errorcode,"couldn't install sound");
 			return 1;
 		}
+		
+		FMOD_System_SetDriver(fmod_system, fiend_sound_driver);
 	
-		FSOUND_SetSFXMasterVolume(fiend_sound_volume);
+		memset(&soundex_info, 0, sizeof(FMOD_CREATESOUNDEXINFO));
+		soundex_info.cbsize   = sizeof(FMOD_CREATESOUNDEXINFO);
+	
+		FMOD_System_SetDriver(fmod_system, fiend_sound_driver);
+	
+		//FSOUND_SetSFXMasterVolume(fiend_sound_volume);
+		FMOD_CHANNELGROUP *cgroup = NULL;
+		FMOD_System_GetMasterChannelGroup(fmod_system, &cgroup);
+		FMOD_ChannelGroup_SetVolume(cgroup, ((float)fiend_sound_volume)/256);
 	}
 
 	
@@ -309,7 +322,7 @@ void exit_fiend(void)
 		destroy_bitmap(csl_bkgd);
 
 
-	FSOUND_Close();
+	FMOD_System_Close(fmod_system);
 
 	allegro_exit();
 }

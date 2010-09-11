@@ -19,10 +19,6 @@ SOUND_INFO *sound_info;
 
 SOUND_DATA *sound_data;
 
-FMOD_SYSTEM *fmod_system;
-FMOD_CHANNEL *fmod_channel = NULL;
-FMOD_CREATESOUNDEXINFO soundex_info;
-
 int num_of_sounds=0;
 
 
@@ -39,11 +35,6 @@ int load_sounds(void)
 	int i;
 	unsigned int j,k;
 	
-	FMOD_System_Create(&fmod_system);
-	FMOD_System_Init(fmod_system, 32, FMOD_INIT_NORMAL, NULL);
-	
-	memset(&soundex_info, 0, sizeof(FMOD_CREATESOUNDEXINFO));
-	soundex_info.cbsize   = sizeof(FMOD_CREATESOUNDEXINFO);
 	
 	sound_info = calloc(sizeof(SOUND_INFO), MAX_SOUNDS);
 

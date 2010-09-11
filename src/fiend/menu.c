@@ -109,7 +109,8 @@ int play_menu_sound(char *name, int loop)
 		num+=temp;
 	}
 	
-	FSOUND_Sample_SetDefaults(sound_info[num].sound,-1,sound_info[num].volume,128,200);
+	//FSOUND_Sample_SetDefaults(sound_info[num].sound,-1,sound_info[num].volume,128,200);
+	FMOD_Sound_SetDefaults(sound_info[num].sound, 44100, ((float)sound_info[num].volume)/256, 128, 200);
 	
 	if(loop)
 		FMOD_Sound_SetLoopCount(sound_info[num].sound,FMOD_LOOP_NORMAL);
@@ -563,7 +564,10 @@ static void update_menu_logic(void)
 					if(fiend_sound_volume<0)
 						fiend_sound_volume = 0;
 
-					FSOUND_SetSFXMasterVolume(fiend_sound_volume);
+					//FSOUND_SetSFXMasterVolume(fiend_sound_volume);
+					FMOD_CHANNELGROUP *cgroup = NULL;
+					FMOD_System_GetMasterChannelGroup(fmod_system, &cgroup);
+					FMOD_ChannelGroup_SetVolume(cgroup, ((float)fiend_sound_volume)/256);
 				}
 				else if(menu_row == 1)
 				{
@@ -590,7 +594,10 @@ static void update_menu_logic(void)
 					if(fiend_sound_volume>255)
 						fiend_sound_volume = 255;
 
-					FSOUND_SetSFXMasterVolume(fiend_sound_volume);
+					//FSOUND_SetSFXMasterVolume(fiend_sound_volume);
+					FMOD_CHANNELGROUP *cgroup = NULL;
+					FMOD_System_GetMasterChannelGroup(fmod_system, &cgroup);
+					FMOD_ChannelGroup_SetVolume(cgroup, ((float)fiend_sound_volume)/256);
 				}
 				else if(menu_row == 1)
 				{

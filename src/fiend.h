@@ -279,6 +279,10 @@ typedef struct
 
 extern BEAM beam[BEAM_NUM];
 
+extern FMOD_SYSTEM *fmod_system;
+extern FMOD_CHANNEL *fmod_channel;
+extern FMOD_CREATESOUNDEXINFO soundex_info;
+
 
 void init_frame_speed();
 void reset_frame_speed();

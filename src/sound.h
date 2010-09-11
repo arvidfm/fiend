@@ -39,9 +39,6 @@ extern int num_of_sounds;
 extern SOUND_INFO *sound_info;
 extern SOUND_DATA *sound_data;
 
-extern FMOD_SYSTEM *fmod_system;
-extern FMOD_CHANNEL *fmod_channel;
-extern FMOD_CREATESOUNDEXINFO soundex_info;
 // the functions
 
 
