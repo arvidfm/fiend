@@ -5,6 +5,7 @@
 // Code by Thomas Grip and Pierre Renaux
 ///////////////////////////////////////////////////
 
+#include <ctype.h>
 
 
 #include "fiend.h"
@@ -57,8 +58,6 @@ DATAFILE *font_avalon,*font_arial,*font_avalon2,*font_small1,*font_small2;
 
 //the error code shown when exiting the program with failure!
 char fiend_errorcode[60]="Unknown error";
-
-
 
 int init_fiend2(void)
 {

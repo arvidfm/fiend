@@ -280,8 +280,6 @@ typedef struct
 extern BEAM beam[BEAM_NUM];
 
 
-
-
 void init_frame_speed();
 void reset_frame_speed();
 double show_frame_speed();

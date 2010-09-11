@@ -1055,19 +1055,19 @@ void get_args(int argc, char *argv[])
 		{
 			strncpy(temp, argv[i]+1, strlen(argv[i]));
 						
-			if(_stricmp(temp,"debug")==0)
+			if(strcasecmp(temp,"debug")==0)
 			{
 				debug_is_on =1;
 			}
-			else if(_stricmp(temp,"vsync")==0)
+			else if(strcasecmp(temp,"vsync")==0)
 			{
 				vsync_is_on =1;
 			}
-			else if(_stricmp(temp,"nosound")==0)
+			else if(strcasecmp(temp,"nosound")==0)
 			{
 				sound_is_on =0;
 			}
-			else if(_stricmp(temp,"sounddriver")==0)
+			else if(strcasecmp(temp,"sounddriver")==0)
 			{
 				if(i+1<argc)
 				{
@@ -1075,7 +1075,7 @@ void get_args(int argc, char *argv[])
 					i++;
 				}
 			}
-			else if(_stricmp(temp,"sounddriver")==0)
+			else if(strcasecmp(temp,"sounddriver")==0)
 			{
 				if(i+1<argc)
 				{
@@ -1083,7 +1083,7 @@ void get_args(int argc, char *argv[])
 					i++;
 				}
 			}
-			else if(_stricmp(temp,"map")==0)
+			else if(strcasecmp(temp,"map")==0)
 			{
 				if(i+1<argc)
 				{
@@ -1091,7 +1091,7 @@ void get_args(int argc, char *argv[])
 					i++;
 				}
 			}
-			else if(_stricmp(temp,"mapdata")==0)
+			else if(strcasecmp(temp,"mapdata")==0)
 			{
 				if(i+1<argc)
 				{

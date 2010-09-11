@@ -89,9 +89,9 @@ int load_fiend_note(char *file)
 	sscanf(temp_line,"%s %s %s %s",buffer,temp_string[0],buffer,temp_string[1]);
 	
 		//get the type of doument
-	if( _stricmp(temp_string[0], "SCROLL")==0)
+	if( strcasecmp(temp_string[0], "SCROLL")==0)
 		note->type = NOTE_TYPE_SCROLLING;
-	else if( _stricmp(temp_string[0], "PAGES")==0)
+	else if( strcasecmp(temp_string[0], "PAGES")==0)
 		note->type = NOTE_TYPE_PAGES;
 	else 
 		note->type = NOTE_TYPE_SCROLLING;
@@ -103,7 +103,7 @@ int load_fiend_note(char *file)
 
 	for(i=0;i<FONT_NUM;i++)
 	{
-		if(_stricmp(font_info[i].name,temp_string[1])==0)
+		if(strcasecmp(font_info[i].name,temp_string[1])==0)
 		{
 			found_font =1;
 			note->font = font_info[i].font;
@@ -136,13 +136,13 @@ int load_fiend_note(char *file)
 				if(num!=EOF)
 					for(i=1;i<num;i++)
 					{
-						if(_stricmp(temp_string[i],"LINE")==0)
+						if(strcasecmp(temp_string[i],"LINE")==0)
 							note->chapter[note->num_of_chapters-1].begin_property = 2;
-						else if(_stricmp(temp_string[i],"CENTERSCREEN")==0)
+						else if(strcasecmp(temp_string[i],"CENTERSCREEN")==0)
 							note->chapter[note->num_of_chapters-1].begin_property = 1;
-						else if(_stricmp(temp_string[i],"RIGHT")==0)
+						else if(strcasecmp(temp_string[i],"RIGHT")==0)
 							note->chapter[note->num_of_chapters-1].allignment = 1;
-						else if(_stricmp(temp_string[i],"CENTER")==0)
+						else if(strcasecmp(temp_string[i],"CENTER")==0)
 							note->chapter[note->num_of_chapters-1].allignment = 2;
 					}
 				chapter_begin =0;
@@ -152,11 +152,11 @@ int load_fiend_note(char *file)
 				if(num!=EOF)
 					for(i=1;i<num;i++)
 					{
-						if(_stricmp(temp_string[i],"LINE")==0)
+						if(strcasecmp(temp_string[i],"LINE")==0)
 							note->chapter[note->num_of_chapters-1].end_property = 2;
-						else if(_stricmp(temp_string[i],"PAGE")==0)
+						else if(strcasecmp(temp_string[i],"PAGE")==0)
 							note->chapter[note->num_of_chapters-1].end_property = 1;
-						else if(_stricmp(temp_string[i],"END_OF_FILE")==0)
+						else if(strcasecmp(temp_string[i],"END_OF_FILE")==0)
 							file_ended=1;
 					}
 
