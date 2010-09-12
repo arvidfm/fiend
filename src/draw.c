@@ -302,7 +302,7 @@ void draw_lightmap2(BITMAP *dest, BITMAP *src,int x, int y)
  register char *src_buffer;
  int dest_add=dest->w-x_length;
  int src_add= 0;
- 
+ int i, j;
 
 //Do some stuff so the we only draw the part of the bitmap that is visable
 
@@ -344,25 +344,6 @@ void draw_lightmap2(BITMAP *dest, BITMAP *src,int x, int y)
  else
   dest_buffer+= dest->ct*dest->w+x+x_start;
 
-/* i = y_length;
- while(i)
- {
-  j= x_length;
-   while(j)
-    {
-//     if(*src_buffer!=31)
-  	 *dest_buffer = (*dest_buffer+*src_buffer);
-     if(*dest_buffer > 31)
-      *dest_buffer = 31;
-     dest_buffer++;
-     src_buffer++;
-     j--;
-    }
-  dest_buffer+=dest_add;
-  src_buffer+=src_add;
-  i--;
-
- }*/
  
  //draw the sprite
 /*	// Assembly code reworked into C code below.
@@ -396,33 +377,21 @@ add edi, dest_add
 dec edx 
 jnz zoop 
 }
-//*/
+*/
 
-	// C version of the assembly code above, copying stuff between register buffers.
-	// NOTE: Is probably full of errors. Should be checked at some point!
-register char *esi = src_buffer;	// put src_buffer in register [ESI: Source register]
-register char *edi = dest_buffer;	// put dest_buffer in register [EDI: Destination register]
-
-int edx, ecx;
-unsigned int al;
-
-for (edx=y_length; edx != 0; edx--) {	// Loop over y coords
-	for (ecx=x_length; ecx != 0; ecx--) {	// Loop over x coords
-			// al is pointer to pixel?
-		al = *esi;	// put (byte @ DS:ESI) in register [AL: Accumulator register - arithemtics]
-		al += *edi;	// increase value in [AL] by value [EDI] is pointing at.
+for (i=0; i<y_length; i++) {
+	for (j=0; j<x_length; j++) {
+		*dest_buffer = *src_buffer + *dest_buffer;
 		
-		if ((unsigned int)al >= 32) {	// Clip 'al' to 32.
-			al = 32;
-		}
+		if (*dest_buffer > 31) *dest_buffer = 31;
 		
-		*edi = al;
-		edi++;
+		dest_buffer++;
+		src_buffer++;
 	}
 	
-	esi += src_add;
-	edi += dest_add;
-};
+	src_buffer += src_add;
+	dest_buffer += dest_add;
+}
 
 }
 
