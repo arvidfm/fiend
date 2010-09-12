@@ -104,7 +104,7 @@ int init_fiend2(void)
 	rectfill(screen,30+80,420,240+80,460,makecol(160,20,10));
 	if(load_items())return CSLMSG_QUIT;
 	
-	if(sound_is_on)
+	if(!sound_is_on)
 	{
 		//csl_textout(2,"Loading sound data...");
 		rectfill(screen,30+80,420,275+80,460,makecol(160,20,10));
@@ -205,7 +205,7 @@ int init_fiend(void)
 	{
 		FMOD_RESULT result = FMOD_System_Create(&fmod_system);
 		printf("Create: %d\n", result);
-		result = FMOD_System_Init(fmod_system, 100, FMOD_INIT_NORMAL, 0);
+		result = FMOD_System_Init(fmod_system, MAX_SOUNDS_PLAYING, FMOD_INIT_NORMAL, 0);
 		printf("Init: %d\n", result);
 
 		//FSOUND_SetBufferSize(fiend_sound_buffer_size);

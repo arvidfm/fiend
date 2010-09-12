@@ -1,5 +1,6 @@
 #include <allegro.h>
 #include <fmod.h>
+#include <math.h>
 
 #include "map.h"
 #include "tile.h"

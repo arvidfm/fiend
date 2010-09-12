@@ -82,7 +82,6 @@ int save_game(char *file, char* name)
 	sprintf(savedata.date,"%s", ctime(&date));
 
 	savedata.play_time = fiend_playtime;
-
 	//save the savedata struct
 	fwrite(&savedata, sizeof(savedata),1,f);
 

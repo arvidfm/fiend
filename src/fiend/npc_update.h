@@ -17,7 +17,7 @@ typedef struct
 	int animation;
 }NPC_AI_DATA;
 
-NPC_AI_DATA npc_ai[];
+NPC_AI_DATA npc_ai[MAX_NPC_NUM];
 
 
 void update_npc(void);

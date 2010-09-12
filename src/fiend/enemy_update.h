@@ -48,7 +48,7 @@ typedef struct
 	int animation;
 }ENEMY_AI_DATA;
 
-ENEMY_AI_DATA enemy_ai[];
+ENEMY_AI_DATA enemy_ai[MAX_ENEMY_DATA];
 
 
 void update_enemy(void);

@@ -97,9 +97,8 @@ void check_link_collison(void)
 		save_local_vars();
 
 		//Load the new map...
-		printf("Laddar ny mapp %s %s\n", map, map_name);
+		printf("Loading map %s %s\n", map, map_name);
 		load_edit_map(map, map_name);
-		printf("Laddat ny mapp\n");
 		load_local_vars();
 		
 		///////////////////////////////////

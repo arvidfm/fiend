@@ -69,9 +69,9 @@ int load_sounds(void)
 		
 		//sound_info[num_of_sounds].sound = FSOUND_Sample_Load(FSOUND_FREE,final_path,FSOUND_2D,0);//load the sound
 		
-		FMOD_System_CreateSound(fmod_system, final_path, FMOD_2D, &soundex_info, &sound_info[num_of_sounds].sound);
+		FMOD_RESULT res = FMOD_System_CreateSound(fmod_system, final_path, FMOD_2D, &soundex_info, &sound_info[num_of_sounds].sound);
 		
-		if(sound_info[num_of_sounds].sound==NULL){allegro_message("couldn't load %s",final_path);exit(-1);}//error testing...
+		//if(sound_info[num_of_sounds].sound==NULL){allegro_message("couldn't load %s",final_path);exit(-1);}//error testing...
 		
 		num_of_sounds++;
 	}
