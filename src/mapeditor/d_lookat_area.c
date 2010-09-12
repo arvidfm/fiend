@@ -5,7 +5,7 @@
 #include "mapedit.h"
 
 
-static int current_look_at_area=0;
+int current_look_at_area=0;
 
 //make a new object
 void make_new_look_at_area(int x, int y)

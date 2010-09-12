@@ -93,11 +93,13 @@ void check_link_collison(void)
 		//// THE MAP LOADING BEGINS////////
 		///////////////////////////////////
 
-		stop_all_sounds();
+		//stop_all_sounds();
 		save_local_vars();
 
 		//Load the new map...
+		printf("Laddar ny mapp %s %s\n", map, map_name);
 		load_edit_map(map, map_name);
+		printf("Laddat ny mapp\n");
 		load_local_vars();
 		
 		///////////////////////////////////

@@ -335,17 +335,17 @@ int init_mapeditor(void)
 
 	//init the graphic mode
 	set_color_depth(16);
-    if(set_gfx_mode(GFX_DIRECTX,800,600,0,0)!=0)
+    if(set_gfx_mode(GFX_AUTODETECT_WINDOWED,800,600,0,0)!=0)
 	{
 	   set_color_depth(15);
-       if(set_gfx_mode(GFX_DIRECTX,800,600,0,0)!=0)
+       if(set_gfx_mode(GFX_AUTODETECT_WINDOWED,800,600,0,0)!=0)
          return 1;
 	}
 	
-	if(!FSOUND_Init(44100, 32, 0))
-	{
-		return 1;
-	}
+	//if(!FSOUND_Init(44100, 32, 0))
+	//{
+	//	return 1;
+	//}
 		
     init_grafik4();
 	

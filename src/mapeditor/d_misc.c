@@ -157,7 +157,7 @@ void sort_tiles(void)
 			sprintf(string1,"%s",tile_info[sorted_tile_list[i]].name);
 			sprintf(string2,"%s",tile_info[sorted_tile_list[i+1]].name);
 			
-			if(_stricmp(string1,string2)>0)
+			if(strcasecmp(string1,string2)>0)
 			{
 				temp = sorted_tile_list[i];
 				sorted_tile_list[i] = sorted_tile_list[i+1];

@@ -14,3 +14,4 @@ IF(FMOD_FOUND)
 ENDIF(FMOD_FOUND)
 
 add_subdirectory(src/fiend)
+add_subdirectory(src/mapeditor)

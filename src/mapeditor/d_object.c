@@ -36,7 +36,7 @@ void sort_objects(void)
 			sprintf(string1,"%s",object_info[sorted_object_list[i]].name);
 			sprintf(string2,"%s",object_info[sorted_object_list[i+1]].name);
 			
-			if(_stricmp(string1,string2)>0)
+			if(strcasecmp(string1,string2)>0)
 			{
 				temp = sorted_object_list[i];
 				sorted_object_list[i] = sorted_object_list[i+1];

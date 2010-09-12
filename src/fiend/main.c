@@ -73,7 +73,7 @@ void update_game_logic(void)
 
 		update_tiles();
 							
-		update_sound();
+		//update_sound();
 		
 		if(inventory_is_on)update_inventory_logic();
 		

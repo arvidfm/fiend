@@ -75,8 +75,8 @@ int d_soundbutton_proc(int msg,DIALOG *d,int c)
 	
 	if(ans==D_EXIT)
 	{
-		FSOUND_StopSound(FSOUND_ALL);
-		FSOUND_PlaySound(FSOUND_FREE, sound_info[emitsound_chosen].sound);
+		//FSOUND_StopSound(FSOUND_ALL);
+		//FSOUND_PlaySound(FSOUND_FREE, sound_info[emitsound_chosen].sound);
 		return D_REDRAW;
 		
 	}
