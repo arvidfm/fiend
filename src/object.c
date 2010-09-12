@@ -207,7 +207,6 @@ int load_objects(void)
 	if(f==NULL)
 	{sprintf(fiend_errorcode,"couldn't load objects.txt");return 1;} //error testing...
 	
-	
 	while(fscanf(f, "%s %s\n", sprite_file_name[num_of_objects], info_file_name[num_of_objects])!=EOF)
 	{
 		num_of_objects++;	

@@ -35,6 +35,7 @@ void show_gripdesign(void)
 	stretch_sprite(bmp,bmp2,0,0,480,480);
 		
 	speed_counter = 0;
+	
 
 	while(!key[KEY_ESC] && !end)
 	{
@@ -72,10 +73,9 @@ void show_gripdesign(void)
 
 void show_poem(void)
 {
-	char text1[] = "That is not dead which can eternal lie";
+  char text1[] = "That is not dead which can eternal lie";
 	char text2[] = "And with strange aeons even death may die";
 	
-
 	int end=0;
 	int time=0;
 
@@ -93,7 +93,6 @@ void show_poem(void)
 	y1 = 220;
 	x2 = 0;
 	y2 = 260;
-
 	while(!key[KEY_ESC] && !end)
 	{
 		
@@ -101,10 +100,8 @@ void show_poem(void)
 		{
 			
 			time++;
-
 			if(time==5)
 				play_menu_sound("gong",0);
-
 			if(time<200)
 			{
 				alpha1+=0.5;
@@ -133,7 +130,6 @@ void show_poem(void)
 	
 			speed_counter--;
 		}
-		
 		clear(virt);
 		textout(virt,font_avalon2->dat,text1, x1,y1,makecol(alpha1,alpha1,alpha1));
 		textout(virt,font_avalon2->dat,text2, x2,y2,makecol(alpha2,alpha2,alpha2));

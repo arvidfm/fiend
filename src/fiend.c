@@ -33,7 +33,7 @@ int fiend_sound_buffer_size=100;
 int fiend_music_volume=160;
 int fiend_sound_driver=0;
 
-int fiend_gfx_driver=GFX_AUTODETECT;
+int fiend_gfx_driver=GFX_AUTODETECT_WINDOWED;
 
 int game_complete=0;
 
@@ -180,34 +180,41 @@ int init_fiend2(void)
 }
 
 int init_fiend(void)
-{		
+{
+  // FIXME: Why doesn't it work without this line?
+  fiend_gfx_driver = GFX_AUTODETECT_WINDOWED;
+  
     //init the graphic mode
 
 	if(color_depth==16)
 	{
 		set_color_depth(16);
+		
 		if(set_gfx_mode(fiend_gfx_driver,640,480,0,0)!=0)
 		{
 			set_color_depth(15);
 			if(set_gfx_mode(fiend_gfx_driver,640,480,0,0)!=0){
 				strcpy(fiend_errorcode,"couldn't enter graphics mode");
-				return 1;}
+				return 1;
+			}
 		}
 	}
 	
+  sound_is_on = 0;
 	if(sound_is_on)
 	{
-		FMOD_System_Create(&fmod_system);
-		FMOD_RESULT result = FMOD_System_Init(fmod_system, 32, FMOD_INIT_NORMAL, NULL);
+		FMOD_RESULT result = FMOD_System_Create(&fmod_system);
+		printf("Create: %d\n", result);
+		result = FMOD_System_Init(fmod_system, 100, FMOD_INIT_NORMAL, 0);
+		printf("Init: %d\n", result);
 
 		//FSOUND_SetBufferSize(fiend_sound_buffer_size);
-	
 		if(result != FMOD_OK)
 		{
+		  printf("Detta failar %d\n", result);
 			strcpy(fiend_errorcode,"couldn't install sound");
 			return 1;
 		}
-		
 		FMOD_System_SetDriver(fmod_system, fiend_sound_driver);
 	
 		memset(&soundex_info, 0, sizeof(FMOD_CREATESOUNDEXINFO));

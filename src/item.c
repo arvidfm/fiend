@@ -39,7 +39,7 @@ int load_items(void)
 	FILE *f;
 
 	char buffer[50];
-				
+	
 	item_info = calloc(sizeof(ITEM_INFO), MAX_ITEM_INFO);
 	
 															 

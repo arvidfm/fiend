@@ -32,10 +32,13 @@ static void find_one_file(char *file,int attr,int param)
 }
 
 
-BMP_ARRAY* load_bmp_array(char *dir,int item_num)
+BMP_ARRAY* load_bmp_array(char *dir_tmp,int item_num)
 {
 	char file_path[90];
 	char file_name[20];
+	
+	char dir[256];  // NOTE: Workaround; don't call put_backslash() with a string literal (which dir_tmp is).
+	sprintf(dir, "%s", dir_tmp);
 	
 	int i;
 	
@@ -146,10 +149,13 @@ static void find_one_rle_file(char *file,int attr,int param)
 }
 
 
-RLE_ARRAY* load_rle_array(char *dir,int item_num)
+RLE_ARRAY* load_rle_array(char *dir_tmp,int item_num)
 {
 	char file_path[90];
 	char file_name[20];
+	
+	char dir[256];  // NOTE: Workaround; don't call put_backslash() with a string literal (which dir_tmp is).
+	sprintf(dir, "%s", dir_tmp);
 
 	BITMAP *bmp;
 	
