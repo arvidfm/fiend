@@ -4,9 +4,9 @@
 #include "mapedit.h"
 
 
-extern DATAFILE *misc;
+//extern DATAFILE *misc;
 
-current_lightmap=0;
+int current_lightmap=0;
 
 BITMAP *test_buffer;
 BITMAP *temp_buffer1;
@@ -176,11 +176,11 @@ int d_draw_test_lightmap_proc(int msg,DIALOG *d,int c)
 		blit(temp_buffer1,test_buffer,0,0, d->w/2-w/2, d->h/2-h/2, w, h);
 
 		//if scaled print it
-		text_mode(0);
-		if(scaled) textprintf(test_buffer,font,2,2,makecol(255,0,255),"Scaled");
+		//text_mode(0);
+		if(scaled) textprintf_ex(test_buffer,font,2,2,makecol(255,0,255),0,"Scaled");
 		
-		textprintf(test_buffer,font,230,190,makecol(255,0,255),"Num: %d", current_lightmap);
-		text_mode(-1);
+		textprintf_ex(test_buffer,font,230,190,makecol(255,0,255),0,"Num: %d", current_lightmap);
+		//text_mode(-1);
 		//Blit the test to screen
 		blit(test_buffer, screen,0,0,d->x, d->y,d->w,d->h);
 		

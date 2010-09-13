@@ -38,7 +38,7 @@ int file_load_map(void)
  ans = alert("Sure you want a load map?",NULL,NULL,"Yes","Cancel",'\r',0);// are you sure?
  if(ans==2)return D_O_K;
 
- ans = file_select("LOAD A MAP",load_path,"map");//select map
+ ans = file_select_ex("LOAD A MAP",load_path,"map",100,OLD_FILESEL_WIDTH,OLD_FILESEL_HEIGHT);//select map
  if(ans!=0)
  {
   if(exists(load_path)==0) //check if the file exists
@@ -72,7 +72,7 @@ int file_save_proc(void)
  
  strcpy(old_save_path, save_path);
 
- ans = file_select("SAVE A MAP",save_path,"map");
+ ans = file_select_ex("SAVE A MAP",save_path,"map",100,OLD_FILESEL_WIDTH,OLD_FILESEL_HEIGHT);
 
  if(ans!=0)
  {

@@ -48,7 +48,7 @@ int num_of_message_faces=0;
 
 static int face_load_error =0;
 
-static void get_one_face(char *file,int attr,int param)
+static /*int*/ void get_one_face(const char *file,int attr,/*void **/int param)
 {
 	char *name;
 	char name2[40];
@@ -74,6 +74,7 @@ static void get_one_face(char *file,int attr,int param)
 	//allegro_message(name2);
 		
 	num_of_message_faces++;
+    //return 0;
 }
 
 
@@ -81,7 +82,7 @@ int load_message_faces(void)
 {
 	int i;
 
-	i= for_each_file("graphic/faces/*.bmp",FA_ARCH,get_one_face,0);
+	i= for_each_file/*_ex*/("graphic/faces/*.bmp",FA_ARCH/*,0*/,get_one_face,0);
 
 	if(face_load_error || i<1)
 	{

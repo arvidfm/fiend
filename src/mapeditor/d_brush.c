@@ -57,7 +57,7 @@ int d_load_brush_proc(void)
 	ans = alert("Sure you want a load brush?",NULL,NULL,"Yes","Cancel",'\r',0);// are you sure?
 	if(ans==2)return D_O_K;
 
-	ans = file_select("LOAD A BRUSH",brush_load_path,"brs");//select map
+	ans = file_select_ex("LOAD A BRUSH",brush_load_path,"brs",80,OLD_FILESEL_WIDTH,OLD_FILESEL_HEIGHT);//select map
 	if(ans!=0)
 	{
 		if(exists(brush_load_path)==0) //check if the file exists
@@ -84,7 +84,7 @@ int d_save_brush_proc(void)
  
 	strcpy(old_save_path, brush_load_path);
 
-	ans = file_select("SAVE BRUSH",brush_load_path,"brs");
+	ans = file_select_ex("SAVE BRUSH",brush_load_path,"brs",80,OLD_FILESEL_WIDTH,OLD_FILESEL_HEIGHT);
 
 	if(ans!=0)
 	{

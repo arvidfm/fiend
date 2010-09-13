@@ -47,7 +47,7 @@ void draw_the_lights(void)
  }
 
 
- //---´The Normal Lights----//
+ //---ï¿½The Normal Lights----//
  for(i=0;i<NORMAL_LIGHT_NUM;i++)
 	draw_normal_light(mask, i);
 
@@ -327,15 +327,14 @@ void draw_level(void)
 	//----begin some test shit....---//
 	if(debug_is_on)
 	{
-		text_mode(-1);
 		
-		textprintf(virt,font_small1->dat,0,0,makecol(255,255,255),"FPS:%.1f   ",(float) show_frame_speed());
+		textprintf_ex(virt,font_small1->dat,0,0,makecol(255,255,255), -1, "FPS:%.1f   ",(float) show_frame_speed());
 			
-		textprintf(virt,font_avalon->dat,381,4,makecol(0,0,0),"Health: %d%%",player.energy);
-		textprintf(virt,font_avalon->dat,380,3,makecol(255,255,255),"Health: %d%%",player.energy);
+		textprintf_ex(virt,font_avalon->dat,381,4,makecol(0,0,0), -1, "Health: %d%%",player.energy);
+		textprintf_ex(virt,font_avalon->dat,380,3,makecol(255,255,255), -1, "Health: %d%%",player.energy);
 
-		textprintf(virt,font_small1->dat,150,0,makecol(255,255,255),"Mapname: %s",map->name);
-		textprintf(virt,font_small1->dat,150,10,makecol(255,255,255),"Mapfile: %s",map_file);
+		textprintf_ex(virt,font_small1->dat,150,0,makecol(255,255,255), -1, "Mapname: %s",map->name);
+		textprintf_ex(virt,font_small1->dat,150,10,makecol(255,255,255), -1, "Mapfile: %s",map_file);
 	
 		
 		draw_engine_error();

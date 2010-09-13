@@ -26,9 +26,10 @@ RLE_ARRAY *temp_rle_data;
 ////// THE BITMAP ARRAY FUNCTIONS /////////////////////
 //////////////////////////////////////////////////////
  
-static void find_one_file(char *file,int attr,int param)
+static /*int*/ void find_one_file(const char *file,int attr,/*void **/int param)
 {
 	temp_bmp_data[0].dat = load_bmp(file,NULL);
+    //return 0;
 }
 
 
@@ -53,7 +54,8 @@ BMP_ARRAY* load_bmp_array(char *dir_tmp,int item_num)
 	if(item_num==1)
 	{
 		sprintf(file_path,"%s*.bmp",dir);
-		i= for_each_file(file_path,FA_ARCH,find_one_file,0);
+        printf("for_each_file_ex(\"%s\",FA_ALL,0,find_one_file,0)\n", file_path);
+		i= for_each_file/*_ex*/(file_path,FA_ALL/*,0*/,find_one_file,0);
 
 		if(i!=1){allegro_message("couldn't load %s",file_path);exit(-1);}
 		
@@ -138,7 +140,7 @@ void unload_bmp_array(BMP_ARRAY *temp)
 //////////////////////////////////////////////////////
 
 
-static void find_one_rle_file(char *file,int attr,int param)
+static /*int*/ void find_one_rle_file(const char *file,int attr,/*void **/int param)
 {
 	BITMAP *bmp;
 	bmp = load_bmp(file,NULL);
@@ -146,6 +148,7 @@ static void find_one_rle_file(char *file,int attr,int param)
 	temp_rle_data[0].dat = get_rle_sprite(bmp);
 	 
 	destroy_bitmap(bmp);
+    //return 0;
 }
 
 
@@ -172,7 +175,7 @@ RLE_ARRAY* load_rle_array(char *dir_tmp,int item_num)
 	if(item_num==1)
 	{
 		sprintf(file_path,"%s*.bmp",dir);
-		i= for_each_file(file_path,FA_ARCH,find_one_rle_file,0);
+		i= for_each_file/*_ex*/(file_path,FA_ARCH/*,0*/,find_one_rle_file,0);
 
 		if(i!=1){allegro_message("couldn't load %s",file_path);exit(-1);}
 		

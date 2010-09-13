@@ -100,10 +100,10 @@ void draw_engine_error(void)
 {
 	int i;
 
-	text_mode(-1);
+	//text_mode(-1);
 	for(i=0;i<engine_error_num;i++)
 	{
-		textprintf(virt,font_small1->dat,0,20+((engine_error_num-1)*10)-(i*10),makecol(255,255,255),"%s",engine_error[i].string);		
+		textprintf_ex(virt,font_small1->dat,0,20+((engine_error_num-1)*10)-(i*10),makecol(255,255,255),-1,"%s",engine_error[i].string);		
 	}
 }
 
@@ -144,9 +144,9 @@ void make_pickup_message(char *string,BITMAP *pic,int time)
 	
 	clear_to_color(pickup.buffer, makecol(255,0,255));
 
-	text_mode(-1);
-	textprintf_centre(pickup.buffer, font_avalon->dat,241,1,makecol(0,0,0),"%s",string);
-	textprintf_centre(pickup.buffer, font_avalon->dat,240,0,makecol(255,255,255),"%s",string);
+	//text_mode(-1);
+	textprintf_centre_ex(pickup.buffer, font_avalon->dat,241,1,makecol(0,0,0),-1,"%s",string);
+	textprintf_centre_ex(pickup.buffer, font_avalon->dat,240,0,makecol(255,255,255),-1,"%s",string);
 	
 	pickup.ready = 1;
 	
@@ -1039,8 +1039,8 @@ double show_frame_speed(void)
 
 void update_load_text(char *string)
 {
-	text_mode(0);
-	textprintf(screen,font_small1->dat,0,465,makecol(255,255,255),"%s          ",string);
+	//text_mode(0);
+	textprintf_ex(screen,font_small1->dat,0,465,makecol(255,255,255),0,"%s          ",string);
 }
 
 

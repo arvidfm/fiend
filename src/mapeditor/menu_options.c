@@ -55,8 +55,8 @@ int options_grid_proc(void)
 
 int d_ll_edit_proc(int msg,DIALOG *d,int c)
 {
-	text_mode(makecol(255,255,255));	
-	textprintf(screen,font,d->x,d->y,d->fg,"%d ",atoi(temp_level));
+	//text_mode(makecol(255,255,255));	
+	textprintf_ex(screen,font,d->x,d->y,d->fg,makecol(255,255,255),"%d ",atoi(temp_level));
 	return D_O_K;
 }
 

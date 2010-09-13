@@ -25,7 +25,7 @@ int d_print_mapname_proc(int msg,DIALOG *d,int c)
 	switch(msg)
 	{
      case MSG_DRAW:
-		textprintf(screen,font,d->x, d->y, makecol(0,0,0),"Filename: %s   Mapname: %s",get_filename(save_path),map->name,selected); 
+		textprintf_ex(screen,font,d->x, d->y, makecol(0,0,0),-1,"Filename: %s   Mapname: %s",get_filename(save_path),map->name,selected); 
 		break;
 	}
 	return D_O_K;
@@ -36,7 +36,7 @@ int d_print_mapsize_proc(int msg,DIALOG *d,int c)
 	switch(msg)
 	{
      case MSG_DRAW:
-		textprintf(screen,font,d->x, d->y, makecol(0,0,0),"Width: %d   Height: %d",map->w,map->h); 
+		textprintf_ex(screen,font,d->x, d->y, makecol(0,0,0),-1,"Width: %d   Height: %d",map->w,map->h); 
 		break;
 	}
 	return D_O_K;
@@ -48,8 +48,8 @@ int d_print_tileinfo_proc(int msg,DIALOG *d,int c)
 	switch(msg)
 	{
      case MSG_DRAW:
-		text_mode(makecol(255,255,255));
-		textprintf(screen,font,d->x, d->y, makecol(0,0,0),"Tileinfo:%d-%d-%d",tile_info[current_tileset].tile[current_tile].masked,  tile_info[current_tileset].tile[current_tile]. trans,tile_info[current_tileset].tile[current_tile].solid); 
+		//text_mode(makecol(255,255,255));
+		textprintf_ex(screen,font,d->x, d->y, makecol(0,0,0),makecol(255,255,255),"Tileinfo:%d-%d-%d",tile_info[current_tileset].tile[current_tile].masked,  tile_info[current_tileset].tile[current_tile]. trans,tile_info[current_tileset].tile[current_tile].solid); 
 		break;
 	}
 	return D_O_K;
@@ -62,11 +62,11 @@ int d_print_editmode_proc(int msg,DIALOG *d,int c)
 	{
      case MSG_DRAW:
 		if(current_editmode==EDITMODE_NPC_PATH)
-			textprintf(screen,font,d->x, d->y, makecol(0,0,0),"Edit Mode: Path %d for NPC nr %d",npc_path_chosen,current_npc); 
+			textprintf_ex(screen,font,d->x, d->y, makecol(0,0,0),makecol(255,255,255),"Edit Mode: Path %d for NPC nr %d",npc_path_chosen,current_npc); 
 		else if(current_editmode==EDITMODE_ENEMY_PATH)
-			textprintf(screen,font,d->x, d->y, makecol(0,0,0),"Edit Mode: Path %d for enemy nr %d",enemy_path_chosen,current_enemy); 
+			textprintf_ex(screen,font,d->x, d->y, makecol(0,0,0),makecol(255,255,255),"Edit Mode: Path %d for enemy nr %d",enemy_path_chosen,current_enemy); 
 		else
-			textprintf(screen,font,d->x, d->y, makecol(0,0,0),"Edit Mode: %s", editmode_string[current_editmode]); 
+			textprintf_ex(screen,font,d->x, d->y, makecol(0,0,0),makecol(255,255,255),"Edit Mode: %s", editmode_string[current_editmode]); 
 		break;
 	}
 	return D_O_K;
@@ -79,9 +79,9 @@ int d_print_mousepos_proc(int msg,DIALOG *d,int c)
 	switch(msg)
 	{
 	case MSG_DRAW:case MSG_IDLE:
-		text_mode(makecol(255,255,255));
-		textprintf(screen,font,d->x, d->y, makecol(0,0,0),"Mouse_x: %d Mouse_y: %d      ",mouse_x - 10 + (map_x*32),mouse_y - 40 + (map_y*32)); 
-		textprintf(screen,font,d->x, d->y+10, makecol(0,0,0),"Path Nodes: %d   Tileset: %d  ",map->num_of_path_nodes,current_tileset); 
+		//text_mode(makecol(255,255,255));
+		textprintf_ex(screen,font,d->x, d->y, makecol(0,0,0),makecol(255,255,255),"Mouse_x: %d Mouse_y: %d      ",mouse_x - 10 + (map_x*32),mouse_y - 40 + (map_y*32)); 
+		textprintf_ex(screen,font,d->x, d->y+10, makecol(0,0,0),makecol(255,255,255),"Path Nodes: %d   Tileset: %d  ",map->num_of_path_nodes,current_tileset); 
 		break;
 	}
 	return D_O_K;

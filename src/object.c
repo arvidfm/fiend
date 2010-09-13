@@ -270,10 +270,8 @@ int load_objects(void)
 		strcpy(final_path, file_path);
 		strcat(final_path, sprite_file_name[i]);   //Get the tile data .
 
-														 
 	    temp_data = load_bmp_array(final_path,object_info[i].num_of_frames);//load the graphic
 		if(temp_data==NULL){ sprintf(fiend_errorcode,"couldn't load %s",final_path); return 1;}//error testing...
-		
 		
 		for(j=0;j<object_info[i].num_of_frames;j++)//For each of the diffrent pics....
 		{

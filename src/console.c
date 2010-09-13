@@ -410,18 +410,18 @@ static void draw_prompt(void)
 
  if(!cf || (chars <= csl_num_char_w))
  {
-  textprintf(CSL_DBUFF, CSL_FONT,
+  textprintf_ex(CSL_DBUFF, CSL_FONT,
              CSL_DBUFF->cl, CSL_DBUFF->cb-text_height(CSL_FONT)-1,
-             csl_font_color_fg,
+             csl_font_color_fg, -1,
              "%s%s", csl_prompt, temp_str);
 
   x = text_length(CSL_FONT, temp_str) + text_length(CSL_FONT, csl_prompt);
  }
  else
  {
-  textprintf(CSL_DBUFF, CSL_FONT,
+  textprintf_ex(CSL_DBUFF, CSL_FONT,
              CSL_DBUFF->cl, CSL_DBUFF->cb-text_height(CSL_FONT)-1,
-             csl_font_color_fg,
+             csl_font_color_fg, -1,
              "%s%s", csl_i_prompt, temp_str);
   x = text_length(CSL_FONT, temp_str) +
       text_length(CSL_FONT, csl_i_prompt);
@@ -542,7 +542,7 @@ static void draw_csl_text(void)
    {
     tmp[0] = ugetc(csl_text_start);
     tmp[1] = '\0';
-    textout(CSL_DBUFF, CSL_FONT, tmp, x, y, csl_font_color_fg);
+    textout_ex(CSL_DBUFF, CSL_FONT, tmp, x, y, csl_font_color_fg, -1);
    }
 
    tmp[0] = 'W';
@@ -552,7 +552,7 @@ static void draw_csl_text(void)
   }
 
   oups = 0;
- } while(ugetx((U8**)&csl_text_start) && (ugetc(csl_text_start) != '\0')
+ } while(ugetx((char**)&csl_text_start) && (ugetc(csl_text_start) != '\0')
          && (y+text_height(CSL_FONT) > 0));
 
  csl_text_start = old_csl_text_start;
@@ -596,8 +596,8 @@ static int process_csl_msg(int savelast)
    /* On passe les espaces devant */
    while((p1) && (ugetc(p1) == ' ') && (ugetc(p1) != '\0'))
    {
-    ugetx((U8**)&p1);
-    ugetx((U8**)&p);
+    ugetx((char**)&p1);
+    ugetx((char**)&p);
    }
 
    while((p) && (ugetc(p) != ' ') && (ugetc(p) != '\0'))
@@ -640,7 +640,7 @@ static int process_csl_msg(int savelast)
  }
 
  while((p1) && uisspace(ugetc((U8*)p1)))
-  ugetx((U8**)&p1);
+  ugetx((char**)&p1);
 
  if(write_prompt)
  {
@@ -669,7 +669,7 @@ static void c_get_argc(U8 *str, FUNC *c_func)
  str += ustrsize((U8*)c_func->cmd);
  str -= uwidth(str);
 
- while(ugetx((U8**)&str))
+ while(ugetx((char**)&str))
  {
   if(ugetc(str) == ' ')
   {
@@ -716,7 +716,7 @@ static void c_get_argv(U8 *str, FUNC *c_func)
   if(j >= CSL_MAX_ARG)
    return;
 
- } while(ugetx((U8**)&str));
+ } while(ugetx((char**)&str));
 }
 
 /*
@@ -864,7 +864,7 @@ void set_csl_font_color(int fg, int bg)
 {
  csl_font_color_fg = fg;
  csl_font_color_bg = bg;
- text_mode(csl_font_color_bg);
+ //text_mode(csl_font_color_bg);
 }
 
 /*
@@ -1105,7 +1105,7 @@ int process_csl_input(void)
   }
   else if(scan == KEY_HOME && ((key_shifts & KB_CTRL_FLAG) || (key_shifts & KB_SHIFT_FLAG)))
   {
-   while(ugetx((U8**)&csl_text_start));
+   while(ugetx((char**)&csl_text_start));
    csl_text_start -= uwidth(csl_text_start);
    draw = 1;
   }
@@ -1300,7 +1300,7 @@ void csl_textout(int newline, U8 *str)
   if(ugetc(str) == CT_FGCOLOR_CODE || ugetc(str) == CT_BGCOLOR_CODE)
    cc++;
   ln++;
- } while((ugetx((U8**)&str)) && (ugetc(str) != '\0'));
+ } while((ugetx((char**)&str)) && (ugetc(str) != '\0'));
  str = begin;
 
  if(ln <= 0)
@@ -1616,7 +1616,7 @@ int csl_get_temp_y(void)
 */
 static void c_set_clip()
 {
- set_clip(CSL_DBUFF, c_cl, c_ct, c_cr, c_cb);
+ set_clip_rect(CSL_DBUFF, c_cl, c_ct, c_cr, c_cb);
 }
 
 /*
@@ -1675,7 +1675,7 @@ static void c_line_down(void)
   csl_text_start -= uwidth(csl_text_start);;
 
  if(ugetc(csl_text_start) == CT_NEW_LINE)
-  ugetx((U8**)&csl_text_start);
+  ugetx((char**)&csl_text_start);
 }
 
 /*

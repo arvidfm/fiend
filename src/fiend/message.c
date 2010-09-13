@@ -71,7 +71,7 @@ void draw_formated_message_text(BITMAP *dest, char *string, FONT* the_font,int x
 	int string_length = strlen(string);
 	
 	//This can deleted....don't know why it is here.....
-	text_mode(-1);
+	//text_mode(-1);
 	
 	for(i=0;i<length;i++)
 	{
@@ -81,9 +81,9 @@ void draw_formated_message_text(BITMAP *dest, char *string, FONT* the_font,int x
 
 		//print it to screen
 		
-		textout(dest,the_font,temp_m_string,x+col,y+row,message_text_effect_col);
+		textout_ex(dest,the_font,temp_m_string,x+col,y+row,message_text_effect_col,-1);
 		
-		textout(dest,the_font,temp_m_string,x+col,y+row+text_effect_offset,message_text_col);
+		textout_ex(dest,the_font,temp_m_string,x+col,y+row+text_effect_offset,message_text_col,-1);
 				
 		//go forward with the width of the character
 		col+=text_length(the_font,temp_m_string);

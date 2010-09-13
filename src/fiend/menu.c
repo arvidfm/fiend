@@ -139,9 +139,9 @@ static void draw_wave_text(BITMAP *src, BITMAP *dest, int x, int y)
 static void draw_medium_text(BITMAP *dest, char *text, int x, int y,int row)
 {
 	
-	textout(dest,font_menu2->dat,text, x,y-2,makecol(20,20,20));
-	textout(dest,font_menu2->dat,text, x,y+2,makecol(20,20,20));
-	textout(dest,font_menu2->dat,text, x,y,makecol(text_alpha[row],text_alpha[row],text_alpha[row]));
+	textout_ex(dest,font_menu2->dat,text, x,y-2,makecol(20,20,20), -1);
+	textout_ex(dest,font_menu2->dat,text, x,y+2,makecol(20,20,20), -1);
+	textout_ex(dest,font_menu2->dat,text, x,y,makecol(text_alpha[row],text_alpha[row],text_alpha[row]), -1);
 }
 
 
@@ -153,11 +153,11 @@ static void draw_large_text(BITMAP *dest, char *text, int x, int y)
 	y_add = (fixtof( fsin( degree_to_fixed(wave_y) ) ))*5;
 
 
-	textout_centre(dest,font_menu->dat,text, x,y-6+y_add*2,makecol(40,40,40));
-	textout_centre(dest,font_menu->dat,text, x,y+6+y_add*2,makecol(40,40,40));
-	textout_centre(dest,font_menu->dat,text, x,y-2+y_add,makecol(90,90,90));
-	textout_centre(dest,font_menu->dat,text, x,y+2+y_add,makecol(90,90,90));
-	textout_centre(dest,font_menu->dat,text, x,y,makecol(220,220,220));
+	textout_centre_ex(dest,font_menu->dat,text, x,y-6+y_add*2,makecol(40,40,40), -1);
+	textout_centre_ex(dest,font_menu->dat,text, x,y+6+y_add*2,makecol(40,40,40), -1);
+	textout_centre_ex(dest,font_menu->dat,text, x,y-2+y_add,makecol(90,90,90), -1);
+	textout_centre_ex(dest,font_menu->dat,text, x,y+2+y_add,makecol(90,90,90), -1);
+	textout_centre_ex(dest,font_menu->dat,text, x,y,makecol(220,220,220), -1);
 }
 
 static void draw_head_text(BITMAP *dest, char *text, int x, int y)
@@ -167,11 +167,11 @@ static void draw_head_text(BITMAP *dest, char *text, int x, int y)
 	y_add = (fixtof( fsin( degree_to_fixed(wave_y) ) ))*5;
 
 
-	textout_centre(dest,font_menu->dat,text, x,y-6+y_add*2,makecol(20,20,20));
-	textout_centre(dest,font_menu->dat,text, x,y+6+y_add*2,makecol(20,20,20));
-	textout_centre(dest,font_menu->dat,text, x,y-2+y_add,makecol(50,50,50));
-	textout_centre(dest,font_menu->dat,text, x,y+2+y_add,makecol(50,50,50));
-	textout_centre(dest,font_menu->dat,text, x,y,makecol(110,110,110));
+	textout_centre_ex(dest,font_menu->dat,text, x,y-6+y_add*2,makecol(20,20,20), -1);
+	textout_centre_ex(dest,font_menu->dat,text, x,y+6+y_add*2,makecol(20,20,20), -1);
+	textout_centre_ex(dest,font_menu->dat,text, x,y-2+y_add,makecol(50,50,50), -1);
+	textout_centre_ex(dest,font_menu->dat,text, x,y+2+y_add,makecol(50,50,50), -1);
+	textout_centre_ex(dest,font_menu->dat,text, x,y,makecol(110,110,110), -1);
 }
 
 static void fade_menu(void)
@@ -338,7 +338,8 @@ static void update_menu_gfx(void)
 		draw_medium_text(virt, "Backward:", 120, 320,6);  
 		draw_medium_text(virt, "Turn Left:", 120, 340,7);  
 		draw_medium_text(virt, "Turn Right:", 120, 360,8);
-		draw_medium_text(virt, "Back", 120, 400,9);
+        //draw_medium_text(virt, "Toggle FPS:", 120, 380,9);
+		draw_medium_text(virt, "Back", 120, 420,9);
 
 
 		key_2_str(key_attack,temp_string);
@@ -422,17 +423,17 @@ static void update_menu_gfx(void)
 		
 		rect(virt,160,200,320,250,makecol(60,200,70));
 
-		textout_centre(virt,font_menu->dat,"F I E N D",240,205,makecol(10,15,10));
+		textout_centre_ex(virt,font_menu->dat,"F I E N D",240,205,makecol(10,15,10), 1);
 
 		
-		textout(virt,font_avalon->dat,"To get the most out of Fiend it is important that",30,260,makecol(200,200,200));
-		textout(virt,font_avalon->dat,"you have the correct monitor settings.",30,277,makecol(200,200,200));
-		textout(virt,font_avalon->dat,"Follow the steps below to get the optimal settings.",30,294,makecol(200,200,200));
+		textout_ex(virt,font_avalon->dat,"To get the most out of Fiend it is important that",30,260,makecol(200,200,200), -1);
+		textout_ex(virt,font_avalon->dat,"you have the correct monitor settings.",30,277,makecol(200,200,200), -1);
+		textout_ex(virt,font_avalon->dat,"Follow the steps below to get the optimal settings.",30,294,makecol(200,200,200), -1);
 		
-		textout(virt,font_avalon->dat,"1. Turn contrast to max.",30,328,makecol(200,200,200));
-		textout(virt,font_avalon->dat,"2. Turn up brigthness until you see \"Fiend\" in",30,345,makecol(200,200,200));
-		textout(virt,font_avalon->dat,"the green box",53,362,makecol(200,200,200));
-		textout(virt,font_avalon->dat,"3. Turn down brigthness until \"Fiend\" disappears.",30,379,makecol(200,200,200));
+		textout_ex(virt,font_avalon->dat,"1. Turn contrast to max.",30,328,makecol(200,200,200), -1);
+		textout_ex(virt,font_avalon->dat,"2. Turn up brigthness until you see \"Fiend\" in",30,345,makecol(200,200,200), -1);
+		textout_ex(virt,font_avalon->dat,"the green box",53,362,makecol(200,200,200), -1);
+		textout_ex(virt,font_avalon->dat,"3. Turn down brigthness until \"Fiend\" disappears.",30,379,makecol(200,200,200), -1);
 		
 		
 	

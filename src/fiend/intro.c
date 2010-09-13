@@ -131,8 +131,8 @@ void show_poem(void)
 			speed_counter--;
 		}
 		clear(virt);
-		textout(virt,font_avalon2->dat,text1, x1,y1,makecol(alpha1,alpha1,alpha1));
-		textout(virt,font_avalon2->dat,text2, x2,y2,makecol(alpha2,alpha2,alpha2));
+		textout_ex(virt,font_avalon2->dat,text1, x1,y1,makecol(alpha1,alpha1,alpha1), -1);
+		textout_ex(virt,font_avalon2->dat,text2, x2,y2,makecol(alpha2,alpha2,alpha2), -1);
 	
 		blit(virt,screen,0,0,80,0,480,480);
 	}
@@ -544,7 +544,6 @@ void show_intro_text(void)
 	unload_datafile(font_intro);*/
 
 
-
 	speed_counter = 0;
 
 	alpha = 0;
@@ -575,12 +574,11 @@ void show_intro_text(void)
 		}
 		
 		clear(virt);
-
-		textout(virt,font_avalon2->dat,story_text[row], 0,row*25,makecol(alpha,alpha,alpha));
+		textout_ex(virt,font_avalon2->dat,story_text[row], 0,row*25,makecol(alpha,alpha,alpha), -1);
 
 		for(i=0;i<row;i++)
 		{
-			textout(virt,font_avalon2->dat,story_text[i], 0,i*25,makecol(255,255,255));
+			textout_ex(virt,font_avalon2->dat,story_text[i], 0,i*25,makecol(255,255,255), -1);
 		}
 		//textout(virt,font_avalon2->dat,text, x2,y2,makecol(alpha2,alpha2,alpha2));
 	
@@ -673,11 +671,11 @@ void show_ending(void)
 		
 			clear(virt);
 
-			textout(virt,font_avalon2->dat,story_text[row], 0,row*25,makecol(alpha,alpha,alpha));
+			textout_ex(virt,font_avalon2->dat,story_text[row], 0,row*25,makecol(alpha,alpha,alpha), -1);
 
 			for(i=0;i<row;i++)
 			{
-				textout(virt,font_avalon2->dat,story_text[i], 0,i*25,makecol(255,255,255));
+				textout_ex(virt,font_avalon2->dat,story_text[i], 0,i*25,makecol(255,255,255), -1);
 			}
 			//textout(virt,font_avalon2->dat,text, x2,y2,makecol(alpha2,alpha2,alpha2));
 	
@@ -726,7 +724,7 @@ void show_ending(void)
 		
 		clear(virt);
 
-		textout_centre(virt,font_arial->dat,"T H E   E N D",240,220,makecol(alpha,alpha,alpha));
+		textout_centre_ex(virt,font_arial->dat,"T H E   E N D",240,220,makecol(alpha,alpha,alpha), -1);
 
 		blit(virt,screen,0,0,80,0,480,480);
 	}

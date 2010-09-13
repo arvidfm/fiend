@@ -148,12 +148,12 @@ void draw_the_info(void)
 			rect(t_buffer,map->light[i].world_x - (map_x*32)- map->light[i].strech_w/2, map->light[i].world_y - (map_y*32)- map->light[i].strech_h/2,
 		     map->light[i].world_x - (map_x*32)+ map->light[i].strech_w- map->light[i].strech_w/2, map->light[i].world_y - (map_y*32)+ map->light[i].strech_h- map->light[i].strech_h/2,makecol(255,0,255));
  
- text_mode(-1);
+ //text_mode(-1);
 
  if(current_editmode==EDITMODE_LINKS)
 	for(i=0;i<map->num_of_links;i++)
 	{
-		textout_centre(t_buffer,font,map->link[i].name, map->link[i].x - (map_x*32), map->link[i].y - (map_y*32), makecol(255,0,255));
+		textout_centre_ex(t_buffer,font,map->link[i].name, map->link[i].x - (map_x*32), map->link[i].y - (map_y*32), makecol(255,0,255), -1);
 		if(selected==i)
 			rect(t_buffer,  map->link[i].x - map->link[i].w/2- (map_x*32), map->link[i].y - map->link[i].h/2- (map_y*32),
 			     map->link[i].x + map->link[i].w/2- (map_x*32), map->link[i].y + map->link[i].h/2- (map_y*32), makecol(120,255,100));
@@ -185,7 +185,7 @@ void draw_the_info(void)
  if(current_editmode==EDITMODE_SOUNDEMITORS)
 	for(i=0;i<map->num_of_soundemitors;i++)
 	{
-		textout_centre(t_buffer,font,map->soundemitor[i].sound_name, map->soundemitor[i].x - (map_x*32), map->soundemitor[i].y - (map_y*32)+10, makecol(255,0,255));
+		textout_centre_ex(t_buffer,font,map->soundemitor[i].sound_name, map->soundemitor[i].x - (map_x*32), map->soundemitor[i].y - (map_y*32)+10, makecol(255,0,255),-1);
 		if(selected==i)
 			circlefill(t_buffer, map->soundemitor[i].x- (map_x*32), map->soundemitor[i].y- (map_y*32),3,makecol(120,255,100));
 		else
@@ -196,7 +196,7 @@ void draw_the_info(void)
 	for(i=0;i<map->num_of_areas;i++)
 	{
 		circlefill(t_buffer, map->area[i].x - (map_x*32), map->area[i].y - (map_y*32),3,makecol(255,0,255));
-		textout_centre(t_buffer,font,map->area[i].name, map->area[i].x - (map_x*32), map->area[i].y - (map_y*32)+3, makecol(255,0,255));
+		textout_centre_ex(t_buffer,font,map->area[i].name, map->area[i].x - (map_x*32), map->area[i].y - (map_y*32)+3, makecol(255,0,255),-1);
 		if(selected==i)
 			rect(t_buffer,  map->area[i].x - map->area[i].w/2- (map_x*32), map->area[i].y - map->area[i].h/2- (map_y*32),
 			     map->area[i].x + map->area[i].w/2- (map_x*32), map->area[i].y + map->area[i].h/2- (map_y*32), makecol(120,255,100));
@@ -209,8 +209,8 @@ void draw_the_info(void)
 	for(i=0;i<map->num_of_look_at_areas;i++)
 	{
 		circlefill(t_buffer, map->look_at_area[i].x - (map_x*32), map->look_at_area[i].y - (map_y*32),3,makecol(255,0,255));
-		textout_centre(t_buffer,font,map->look_at_area[i].name, map->look_at_area[i].x - (map_x*32), map->look_at_area[i].y - (map_y*32)+3, makecol(255,0,255));
-		textout_centre(t_buffer,font,"Look", map->look_at_area[i].x - (map_x*32), map->look_at_area[i].y - (map_y*32)-9, makecol(255,0,255));
+		textout_centre_ex(t_buffer,font,map->look_at_area[i].name, map->look_at_area[i].x - (map_x*32), map->look_at_area[i].y - (map_y*32)+3, makecol(255,0,255),-1);
+		textout_centre_ex(t_buffer,font,"Look", map->look_at_area[i].x - (map_x*32), map->look_at_area[i].y - (map_y*32)-9, makecol(255,0,255),-1);
 		if(selected==i)
 			rect(t_buffer,  map->look_at_area[i].x - map->look_at_area[i].w/2- (map_x*32), map->look_at_area[i].y - map->look_at_area[i].h/2- (map_y*32),
 			     map->look_at_area[i].x + map->look_at_area[i].w/2- (map_x*32), map->look_at_area[i].y + map->look_at_area[i].h/2- (map_y*32), makecol(120,255,100));
@@ -236,9 +236,9 @@ void draw_the_info(void)
 	{
 		circlefill(t_buffer, npc_path_x(i)- (map_x*32), npc_path_y(i)- (map_y*32),3,makecol(255,0,255));
 		if(selected==i)
-			textprintf_centre(t_buffer, font,npc_path_x(i)- (map_x*32), npc_path_y(i)- (map_y*32)+4, makecol(120,255,100),"Point %d",i);
+			textprintf_centre_ex(t_buffer, font,npc_path_x(i)- (map_x*32), npc_path_y(i)- (map_y*32)+4, makecol(120,255,100),-1,"Point %d",i);
 		else
-			textprintf_centre(t_buffer, font,npc_path_x(i)- (map_x*32), npc_path_y(i)- (map_y*32)+4, makecol(255,0,255),"Point %d",i);
+			textprintf_centre_ex(t_buffer, font,npc_path_x(i)- (map_x*32), npc_path_y(i)- (map_y*32)+4, makecol(255,0,255),-1,"Point %d",i);
 	}	
 
  if(current_editmode==EDITMODE_ENEMY)
@@ -256,9 +256,9 @@ void draw_the_info(void)
 	{
 		circlefill(t_buffer, enemy_path_x(i)- (map_x*32), enemy_path_y(i)- (map_y*32),3,makecol(255,0,255));
 		if(selected==i)
-			textprintf_centre(t_buffer, font,enemy_path_x(i)- (map_x*32), enemy_path_y(i)- (map_y*32)+4, makecol(120,255,100),"Point %d",i);
+			textprintf_centre_ex(t_buffer, font,enemy_path_x(i)- (map_x*32), enemy_path_y(i)- (map_y*32)+4, makecol(120,255,100),-1,"Point %d",i);
 		else
-			textprintf_centre(t_buffer, font,enemy_path_x(i)- (map_x*32), enemy_path_y(i)- (map_y*32)+4, makecol(255,0,255),"Point %d",i);
+			textprintf_centre_ex(t_buffer, font,enemy_path_x(i)- (map_x*32), enemy_path_y(i)- (map_y*32)+4, makecol(255,0,255),-1,"Point %d",i);
 	}	
  
 	
@@ -684,7 +684,7 @@ int d_drawmap_proc(int msg,DIALOG *d,int c)
 	{
 		
 		
-		//!!!Gör om den här så att den passar me roterade object åsså!!!
+		//!!!Gï¿½r om den hï¿½r sï¿½ att den passar me roterade object ï¿½ssï¿½!!!
 		if(selected>=0)
 		{
 			pic = (int)map->object[selected].angle/90;

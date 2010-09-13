@@ -296,23 +296,23 @@ static void print_note_text(char *string,int x, int y,int mode)
 {
 	if(mode==0)
 	{
-		textprintf(virt,note->font,x-1,y-1,makecol(55,55,55),string);
-		textprintf(virt,note->font,x+1,y+1,makecol(55,55,55),string);
-		textprintf(virt,note->font,x,y,makecol(255,255,255),string);
+		textprintf_ex(virt,note->font,x-1,y-1,makecol(55,55,55),-1,string);
+		textprintf_ex(virt,note->font,x+1,y+1,makecol(55,55,55),-1,string);
+		textprintf_ex(virt,note->font,x,y,makecol(255,255,255),-1,string);
 	}
 	else if(mode==1)
 	{
 		x-=text_length(note->font,string);
 		
-		textprintf(virt,note->font,x-1,y-1,makecol(55,55,55),string);
-		textprintf(virt,note->font,x+1,y+1,makecol(55,55,55),string);
-		textprintf(virt,note->font,x,y,makecol(255,255,255),string);
+		textprintf_ex(virt,note->font,x-1,y-1,makecol(55,55,55),-1,string);
+		textprintf_ex(virt,note->font,x+1,y+1,makecol(55,55,55),-1,string);
+		textprintf_ex(virt,note->font,x,y,makecol(255,255,255),-1,string);
 	}
 	else if(mode==2)
 	{
-		textprintf_centre(virt,note->font,x-1,y-1,makecol(55,55,55),string);
-		textprintf_centre(virt,note->font,x+1,y+1,makecol(55,55,55),string);
-		textprintf_centre(virt,note->font,x,y,makecol(255,255,255),string);
+		textprintf_centre_ex(virt,note->font,x-1,y-1,makecol(55,55,55),-1,string);
+		textprintf_centre_ex(virt,note->font,x+1,y+1,makecol(55,55,55),-1,string);
+		textprintf_centre_ex(virt,note->font,x,y,makecol(255,255,255),-1,string);
 	}
 	
 }

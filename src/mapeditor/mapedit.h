@@ -74,5 +74,7 @@ extern DIALOG main_dialog[];
 extern void sort_objects(void);
 extern void sort_tiles(void);
 
+extern DATAFILE *misc;
+
 
 #endif

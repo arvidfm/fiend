@@ -478,7 +478,7 @@ void player_death(void)
 		}
 		
 		clear(virt);
-		textout_centre(virt,font_avalon2->dat,"Y o u   d i e d", 220,240,makecol((alpha/255)*200,(alpha/255)*30,(alpha/255)*30));
+		textout_centre_ex(virt,font_avalon2->dat,"Y o u   d i e d", 220,240,makecol((alpha/255)*200,(alpha/255)*30,(alpha/255)*30), -1);
 	
 		blit(virt,screen,0,0,80,0,480,480);
 	}

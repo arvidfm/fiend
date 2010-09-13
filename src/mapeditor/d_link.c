@@ -59,7 +59,7 @@ int d_browse_map_file(int msg, DIALOG *d, int c)
 	if(ans==D_EXIT)
 	{
 		strcpy(temp_path, temp_map_file);
-		ans2 = file_select("select a map file", temp_path, "map");
+		ans2 = file_select_ex("select a map file", temp_path, "map", 80, OLD_FILESEL_WIDTH, OLD_FILESEL_HEIGHT);
 		if(ans2!=0)
 			strcpy(temp_map_file, temp_path);
 		

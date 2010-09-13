@@ -90,43 +90,43 @@ static void print_big_text(BITMAP *dest,char *text,int x,int y,int chosen,int ce
 	{
 		if(chosen==1)
 		{
-			textprintf_centre(virt,font_avalon->dat,x+1,y+1,makecol(0,0,0),text);
-			textprintf_centre(virt,font_avalon->dat,x-1,y-1,makecol(0,0,0),text);
-			textprintf_centre(virt,font_avalon->dat,x,y,makecol(current_color,current_color,0),text);
+			textprintf_centre_ex(virt,font_avalon->dat,x+1,y+1,makecol(0,0,0),-1,text);
+			textprintf_centre_ex(virt,font_avalon->dat,x-1,y-1,makecol(0,0,0),-1,text);
+			textprintf_centre_ex(virt,font_avalon->dat,x,y,makecol(current_color,current_color,0),-1,text);
 		}
 		else if(chosen==-1)
 		{
-			textprintf_centre(virt,font_avalon->dat,x+1,y+1,makecol(0,0,0),text);
-			textprintf_centre(virt,font_avalon->dat,x-1,y-1,makecol(0,0,0),text);
-			textprintf_centre(virt,font_avalon->dat,x,y,makecol(140,140,140),text);
+			textprintf_centre_ex(virt,font_avalon->dat,x+1,y+1,makecol(0,0,0),-1,text);
+			textprintf_centre_ex(virt,font_avalon->dat,x-1,y-1,makecol(0,0,0),-1,text);
+			textprintf_centre_ex(virt,font_avalon->dat,x,y,makecol(140,140,140),-1,text);
 		}
 		else
 		{
-			textprintf_centre(virt,font_avalon->dat,x+1,y+1,makecol(0,0,0),text);
-			textprintf_centre(virt,font_avalon->dat,x-1,y-1,makecol(0,0,0),text);
-			textprintf_centre(virt,font_avalon->dat,x,y,makecol(255,255,255),text);
+			textprintf_centre_ex(virt,font_avalon->dat,x+1,y+1,makecol(0,0,0),-1,text);
+			textprintf_centre_ex(virt,font_avalon->dat,x-1,y-1,makecol(0,0,0),-1,text);
+			textprintf_centre_ex(virt,font_avalon->dat,x,y,makecol(255,255,255),-1,text);
 		}
 	}
 	else
 	{
 		if(chosen==1)
 		{
-			textprintf_centre(virt,font_avalon->dat,x+1,y+1,makecol(0,0,0),text);
-			textprintf_centre(virt,font_avalon->dat,x-1,y-1,makecol(0,0,0),text);
-			textprintf_centre(virt,font_avalon->dat,x,y,makecol(current_color,current_color,0),text);
+			textprintf_centre_ex(virt,font_avalon->dat,x+1,y+1,makecol(0,0,0),-1,text);
+			textprintf_centre_ex(virt,font_avalon->dat,x-1,y-1,makecol(0,0,0),-1,text);
+			textprintf_centre_ex(virt,font_avalon->dat,x,y,makecol(current_color,current_color,0),-1,text);
 		}
 		else if(chosen==-1)
 		{
-			textprintf_centre(virt,font_avalon->dat,x+1,y+1,makecol(0,0,0),text);
-			textprintf_centre(virt,font_avalon->dat,x-1,y-1,makecol(0,0,0),text);
-			textprintf_centre(virt,font_avalon->dat,x,y,makecol(140,140,140),text);
+			textprintf_centre_ex(virt,font_avalon->dat,x+1,y+1,makecol(0,0,0),-1,text);
+			textprintf_centre_ex(virt,font_avalon->dat,x-1,y-1,makecol(0,0,0),-1,text);
+			textprintf_centre_ex(virt,font_avalon->dat,x,y,makecol(140,140,140),-1,text);
 		}
 
 		else
 		{
-			textprintf_centre(virt,font_avalon->dat,x+1,y+1,makecol(0,0,0),text);
-			textprintf_centre(virt,font_avalon->dat,x-1,y-1,makecol(0,0,0),text);
-			textprintf(virt,font_avalon->dat,x,y,makecol(255,255,255),text);
+			textprintf_centre_ex(virt,font_avalon->dat,x+1,y+1,makecol(0,0,0),-1,text);
+			textprintf_centre_ex(virt,font_avalon->dat,x-1,y-1,makecol(0,0,0),-1,text);
+			textprintf_ex(virt,font_avalon->dat,x,y,makecol(255,255,255),-1,text);
 		}
 	}
 }
@@ -138,30 +138,30 @@ static void print_small_text(BITMAP *dest,char *text,int x,int y,int chosen,int 
 	{
 		if(chosen)
 		{
-			textprintf_centre(virt,font_small2->dat,x+1,y+1,makecol(0,0,0),text);
-			textprintf_centre(virt,font_small2->dat,x-1,y-1,makecol(0,0,0),text);
-			textprintf_centre(virt,font_small2->dat,x,y,makecol(current_color,current_color,0),text);
+			textprintf_centre_ex(virt,font_small2->dat,x+1,y+1,makecol(0,0,0),-1,text);
+			textprintf_centre_ex(virt,font_small2->dat,x-1,y-1,makecol(0,0,0),-1,text);
+			textprintf_centre_ex(virt,font_small2->dat,x,y,makecol(current_color,current_color,0),-1,text);
 		}
 		else
 		{
-			textprintf_centre(virt,font_small2->dat,x+1,y+1,makecol(0,0,0),text);
-			textprintf_centre(virt,font_small2->dat,x-1,y-1,makecol(0,0,0),text);
-			textprintf_centre(virt,font_small2->dat,x,y,makecol(255,255,255),text);
+			textprintf_centre_ex(virt,font_small2->dat,x+1,y+1,makecol(0,0,0),-1,text);
+			textprintf_centre_ex(virt,font_small2->dat,x-1,y-1,makecol(0,0,0),-1,text);
+			textprintf_centre_ex(virt,font_small2->dat,x,y,makecol(255,255,255),-1,text);
 		}
 	}
 	else
 	{
 		if(chosen)
 		{
-			textprintf(virt,font_small2->dat,x+1,y+1,makecol(0,0,0),text);
-			textprintf(virt,font_small2->dat,x-1,y-1,makecol(0,0,0),text);
-			textprintf(virt,font_small2->dat,x,y,makecol(current_color*221,current_color*111,0),text);
+			textprintf_ex(virt,font_small2->dat,x+1,y+1,makecol(0,0,0),-1,text);
+			textprintf_ex(virt,font_small2->dat,x-1,y-1,makecol(0,0,0),-1,text);
+			textprintf_ex(virt,font_small2->dat,x,y,makecol(current_color*221,current_color*111,0),-1,text);
 		}
 		else
 		{
-			textprintf(virt,font_small2->dat,x+1,y+1,makecol(0,0,0),text);
-			textprintf(virt,font_small2->dat,x-1,y-1,makecol(0,0,0),text);
-			textprintf(virt,font_small2->dat,x,y,makecol(255,255,255),text);
+			textprintf_ex(virt,font_small2->dat,x+1,y+1,makecol(0,0,0),-1,text);
+			textprintf_ex(virt,font_small2->dat,x-1,y-1,makecol(0,0,0),-1,text);
+			textprintf_ex(virt,font_small2->dat,x,y,makecol(255,255,255),-1,text);
 		}
 	}
 }
@@ -192,7 +192,7 @@ void update_inventory_graphic(void)
 
 	SAVEDATA temp_save;
 	
-	text_mode(-1);
+	//text_mode(-1);
 
 
 
@@ -200,15 +200,15 @@ void update_inventory_graphic(void)
 
 	if(player.energy>50)
 	{
-		textprintf(virt,font_small2->dat,254,70,makecol((current_color/255)*40,(current_color/255)*60+190,(current_color/255)*40),"Fine");
+		textprintf_ex(virt,font_small2->dat,254,70,makecol((current_color/255)*40,(current_color/255)*60+190,(current_color/255)*40),-1,"Fine");
 	}
 	else if(player.energy>20)
 	{
-		textprintf(virt,font_small2->dat,254,70,makecol((current_color/255)*60+180,(current_color/255)*60+80,(current_color/255)*20),"Caution");
+		textprintf_ex(virt,font_small2->dat,254,70,makecol((current_color/255)*60+180,(current_color/255)*60+80,(current_color/255)*20),-1,"Caution");
 	}
 	else
 	{
-		textprintf(virt,font_small2->dat,254,70,makecol((current_color/255)*60+190,(current_color/255)*40,(current_color/255)*40),"Danger");
+		textprintf_ex(virt,font_small2->dat,254,70,makecol((current_color/255)*60+190,(current_color/255)*40,(current_color/255)*40),-1,"Danger");
 	}
 	///////The Main Menu ///////////////
 	if(current_menu==MENU_MAIN)
