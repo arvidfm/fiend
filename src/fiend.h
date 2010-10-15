@@ -35,6 +35,11 @@
 #ifndef FIEND_DEFINES
 #define FIEND_DEFINES
 
+#ifdef WIN32
+#define strncasecmp _strnicmp
+#define strcasecmp _stricmp
+#endif
+
 #define FIEND_VERSION      0
 #define FIEND_SUB_VERSION  1
 #define FIEND_WIP_VERSION  0

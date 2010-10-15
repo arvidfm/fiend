@@ -561,12 +561,13 @@ static void update_menu_logic(void)
 			{
 				if(menu_row == 0)
 				{
+					FMOD_CHANNELGROUP *cgroup;
 					fiend_sound_volume-=10;
 					if(fiend_sound_volume<0)
 						fiend_sound_volume = 0;
 
 					//FSOUND_SetSFXMasterVolume(fiend_sound_volume);
-					FMOD_CHANNELGROUP *cgroup = NULL;
+					cgroup = NULL;
 					FMOD_System_GetMasterChannelGroup(fmod_system, &cgroup);
 					FMOD_ChannelGroup_SetVolume(cgroup, ((float)fiend_sound_volume)/256);
 				}
@@ -591,12 +592,13 @@ static void update_menu_logic(void)
 			{
 				if(menu_row == 0)
 				{
+					FMOD_CHANNELGROUP *cgroup;
 					fiend_sound_volume+=10;
 					if(fiend_sound_volume>255)
 						fiend_sound_volume = 255;
 
 					//FSOUND_SetSFXMasterVolume(fiend_sound_volume);
-					FMOD_CHANNELGROUP *cgroup = NULL;
+					cgroup = NULL;
 					FMOD_System_GetMasterChannelGroup(fmod_system, &cgroup);
 					FMOD_ChannelGroup_SetVolume(cgroup, ((float)fiend_sound_volume)/256);
 				}
@@ -729,7 +731,7 @@ static void update_menu_logic(void)
 				{
 					fading = 1;
 					next_menu = MENU_MAIN;
-					save_the_config_file();
+					save_config_file();
 				}
 
 			}
@@ -810,7 +812,7 @@ static void update_menu_logic(void)
 			}
 			else if(current_menu == MENU_OPTIONS)
 			{
-					save_the_config_file();
+					save_config_file();
 					fading = 1;
 					next_menu = MENU_MAIN;
 			}

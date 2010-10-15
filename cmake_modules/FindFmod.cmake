@@ -1,6 +1,6 @@
 FIND_PATH(FMOD_INCLUDE_DIR fmod.h /usr/include/fmodex /usr/local/include/fmodex)
 
-FIND_LIBRARY(FMOD_LIBRARY NAMES fmodex PATH /usr/lib /usr/local/lib) 
+FIND_LIBRARY(FMOD_LIBRARY NAMES fmodex_vc fmodex PATH /usr/lib /usr/local/lib)
 
 IF (FMOD_INCLUDE_DIR AND FMOD_LIBRARY)
    SET(FMOD_FOUND TRUE)
@@ -9,7 +9,7 @@ ENDIF (FMOD_INCLUDE_DIR AND FMOD_LIBRARY)
 
 IF (FMOD_FOUND)
    IF (NOT Fmod_FIND_QUIETLY)
-      MESSAGE(STATUS "Found Fmod: ${FMOD_LIBRARY}")
+      MESSAGE(STATUS "Found FMOD: ${FMOD_LIBRARY}")
    ENDIF (NOT Fmod_FIND_QUIETLY)
 ELSE (FMOD_FOUND)
    IF (Fmod_FIND_REQUIRED)

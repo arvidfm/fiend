@@ -704,7 +704,9 @@ int d_new_trigger_button_proc(int msg, DIALOG *d, int c)
 		map->num_of_triggers++;
 
 		return D_REDRAW;
-	}	
+	}
+
+	return D_O_K;
 	
 }
 
@@ -719,7 +721,7 @@ int d_edit_trigger_button_proc(int msg, DIALOG *d, int c)
 		if(map->num_of_triggers>0)edit_cond_and_event();
 		return D_REDRAW;
 	}	
-	
+	return D_O_K;
 }
 int d_delete_trigger_button_proc(int msg, DIALOG *d, int c)
 {
@@ -750,7 +752,7 @@ int d_delete_trigger_button_proc(int msg, DIALOG *d, int c)
 
 		return D_REDRAW;
 	}	
-	
+	return D_O_K;
 }
 
 //////////////////////////////////////////////////////

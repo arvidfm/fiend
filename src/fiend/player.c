@@ -549,7 +549,7 @@ void player_death(void)
 
 void update_global_keys(void)
 {
-	char c;
+	//char c;
 	static int F12_down=0;
 	static int F6_down=0;
 	static int F7_down=0;

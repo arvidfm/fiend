@@ -36,9 +36,9 @@ extern int auto_move_counter;
 extern int auto_move_active;
 
 //player stuff
-extern pushing_an_object;
-extern have_pushed_an_object;
-extern the_push_voice;
+extern int pushing_an_object;
+extern int have_pushed_an_object;
+extern int the_push_voice;
 
 //music
 extern char current_music[50];

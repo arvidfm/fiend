@@ -741,6 +741,7 @@ int shell_collides(float x, float y)
 
 	if(check_tile_collision(x,y,2,2))return 1;
 
+	return 0;
 }
 
 
@@ -872,8 +873,6 @@ struct
 	int key_pickup;
 	int key_inventory;
 }config_file;
-
-char the_bajs_file[50] = "config.dat";
 	
 void load_config_file(void)
 {
@@ -948,7 +947,7 @@ void save_config_file(void)
 
 
 
-void save_the_config_file(void)
+/*void save_the_config_file(void)
 {
 	char file[90] = "config.dat";
 	char file1[90] = "config.dat";
@@ -988,7 +987,7 @@ void save_the_config_file(void)
 	fwrite(&config_file,sizeof(config_file),1,f);
 	
 	fclose(f);
-}
+}*/
 
 
 /////////////////////////////////////////////////

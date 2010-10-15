@@ -203,6 +203,7 @@ int init_fiend(void)
   sound_is_on = 0;
 	if(sound_is_on)
 	{
+		FMOD_CHANNELGROUP *cgroup;
 		FMOD_RESULT result = FMOD_System_Create(&fmod_system);
 		printf("Create: %d\n", result);
 		result = FMOD_System_Init(fmod_system, MAX_SOUNDS_PLAYING, FMOD_INIT_NORMAL, 0);
@@ -223,7 +224,7 @@ int init_fiend(void)
 		FMOD_System_SetDriver(fmod_system, fiend_sound_driver);
 	
 		//FSOUND_SetSFXMasterVolume(fiend_sound_volume);
-		FMOD_CHANNELGROUP *cgroup = NULL;
+		cgroup = NULL;
 		FMOD_System_GetMasterChannelGroup(fmod_system, &cgroup);
 		FMOD_ChannelGroup_SetVolume(cgroup, ((float)fiend_sound_volume)/256);
 	}
@@ -316,7 +317,6 @@ void exit_fiend(void)
 	release_message_faces();
 		
 	free_sounds();
-	release_npc();
 	release_tiles();
 	release_characters();
 	release_items();

@@ -570,7 +570,7 @@ static int d_edit_trigger_button_proc(int msg, DIALOG *d, int c)
 		edit_cond_and_event();
 		return D_REDRAW;
 	}	
-	
+	return D_O_K;
 }
 static int d_delete_trigger_button_proc(int msg, DIALOG *d, int c)
 {
@@ -599,7 +599,7 @@ static int d_delete_trigger_button_proc(int msg, DIALOG *d, int c)
 
 		return D_REDRAW;
 	}	
-	
+	return D_O_K;
 }
 
 //////////////////////////////////////////////////////

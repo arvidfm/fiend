@@ -24,7 +24,7 @@ int get_link_num(char* name)
 			return i;
 	}
 
-
+	return -1;
 }
 
 //checks if the player has collided with link if so do some stuff
@@ -97,7 +97,6 @@ void check_link_collison(void)
 		save_local_vars();
 
 		//Load the new map...
-		//printf("Loading map %s %s\n", map, map_name);
 		load_edit_map(map, map_name);
 		load_local_vars();
 		

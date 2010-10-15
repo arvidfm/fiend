@@ -359,10 +359,10 @@ void stop_fiend_music(void)
 
 void pause_fiend_music(void)
 {
+	FMOD_BOOL paused;
 	if(!sound_is_on)return;
 	if(strcmp(current_music,"none")==0)return;
 	
-	FMOD_BOOL paused;
 	FMOD_Channel_GetPaused(fmod_music_channel, &paused);
 	if(!paused)
 	{
@@ -372,11 +372,11 @@ void pause_fiend_music(void)
 
 void resume_fiend_music(void)
 {
+	FMOD_BOOL paused;
 	if(!sound_is_on)return;
 	if(strcmp(current_music,"none")==0)return;
 	
 	
-	FMOD_BOOL paused;
 	FMOD_Channel_GetPaused(fmod_music_channel, &paused);
 	if(paused)
 	{

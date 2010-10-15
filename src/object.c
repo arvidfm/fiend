@@ -187,7 +187,6 @@ void draw_fiend_object(BITMAP *dest,OBJECT_INFO *temp,int x, int y,int action,in
 //Load object graphics
 int load_objects(void)
 {
-	
 	BMP_ARRAY *temp_data;
 	BITMAP *bmp;
 	
@@ -197,13 +196,13 @@ int load_objects(void)
 	char sprite_file_name[300][30];
     char info_file_name[300][30];
 	char *file_path ="graphic/objects/";
-	char final_path[40];
+	char final_path[100];
 	int i,j,k,temp;
-	
+
 	object_info = calloc(sizeof(OBJECT_INFO),MAX_OBJECTS);
 	
 	f = fopen("graphic/objects/objects.txt", "r");      //Load the Info file
-	
+
 	if(f==NULL)
 	{sprintf(fiend_errorcode,"couldn't load objects.txt");return 1;} //error testing...
 	
@@ -263,8 +262,6 @@ int load_objects(void)
 
 		fclose(f);
 		//-------END GET INFO---------------
-
-		
 		
 		//--------BEGIN GET DATA------------------
 		strcpy(final_path, file_path);
@@ -353,7 +350,6 @@ int load_objects(void)
 
 				
 		//----------END GET DATA-------------------
-	
 	}
 
 	

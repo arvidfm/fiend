@@ -1129,8 +1129,8 @@ int check_automove_events(void)
 
 	if(type==EVENT_AUTOMOVE_TOGGLE)
 	{
-		if(auto_move_active)stop_auto_move;
-		else resume_auto_move;
+		if(auto_move_active)stop_auto_move();
+		else resume_auto_move();
 		return 1;
 	}
 

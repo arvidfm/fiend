@@ -218,9 +218,9 @@ void show_intro_text(void)
 
 	char text[50]="GRIPDESIGN";
 
-	BITMAP *bmp;
-	BITMAP *bmp2;
-	BITMAP *pic;
+	//BITMAP *bmp;
+	//BITMAP *bmp2;
+	//BITMAP *pic;
 
 	//bmp = create_bitmap(480,40);
 	//bmp2 = create_bitmap(480,480);

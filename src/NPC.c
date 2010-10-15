@@ -10,9 +10,6 @@
 #include "fiend.h"
 #include "NPC.h"
 
-
-
-
 char npc_filename[80] = "maps/npc.inf";
 
 
@@ -23,7 +20,7 @@ int num_of_npc=0;
 
 
 
-//initaialze det npc stuff and clear the npc struct
+//initialize the npc stuff and clear the npc struct
 int init_npc_data(void)
 {
 	int i;

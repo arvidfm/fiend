@@ -37,11 +37,10 @@ BMP_ARRAY* load_bmp_array(char *dir_tmp,int item_num)
 {
 	char file_path[90];
 	char file_name[20];
+	int i;
 	
 	char dir[256];  // NOTE: Workaround; don't call put_backslash() with a string literal (which dir_tmp is).
 	sprintf(dir, "%s", dir_tmp);
-	
-	int i;
 	
 	put_backslash(dir);
 	
@@ -156,13 +155,11 @@ RLE_ARRAY* load_rle_array(char *dir_tmp,int item_num)
 {
 	char file_path[90];
 	char file_name[20];
+	BITMAP *bmp;
+	int i;
 	
 	char dir[256];  // NOTE: Workaround; don't call put_backslash() with a string literal (which dir_tmp is).
 	sprintf(dir, "%s", dir_tmp);
-
-	BITMAP *bmp;
-	
-	int i;
 	
 	put_backslash(dir);
 	

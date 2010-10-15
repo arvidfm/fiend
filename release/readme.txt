@@ -1,4 +1,12 @@
 
+============================================================================================
+NOTE: This readme is from the old distribution of fiend, and may need to be updated in order
+to reflect the change to the BSD license.
+============================================================================================
+
+
+
+
 "That is not dead which can eternal lie, 
 and with strange aeons even death may die."
 
